@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* 
+    字体大小        font-size           必须有单位，电脑中一般是px
+    字体粗细        font-weight         属性值：数字（开发使用）正常：400，加粗：700；关键字：正常：normal ，加粗：bold;
+    字体倾斜        font-style
+    行高            font-height
+    字体族          font-family
+    字体复合属性    font
+    文本缩进        text-indent
+    文本对齐        text-aline
+    修饰线          text-decoration
+    颜色            color
+*/
+/* 字体大小 */
+        .px10{
+            font-size: 10px;
+        }
+        .px30{
+            font-size: 30px;
+        }
+/* 字体粗细 */
+        .weight-nor{
+            font-weight: 400;
+        }
+/* 字体倾斜 */
+        .style{
+            font-style: italic;
+        }
+        .style-nor{
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <!-- 字体大小 -->
+    <p class="px10">这是10字号</p>
+    <p class="px30">这是30字号</p>
+    <p>默认字体大小为16px</p>
+    <!-- 字体粗细 400为正常,700为加粗 -->
+    <h3 class="weight-nor">这是三级标题</h3>
+    <h3>这是三级标题</h3>
+    <!-- 
+    字体倾斜font-style:  作用:清除文字默认的倾斜效果
+    属性值: 正常:normal    倾斜:italic 
+    -->
+    <div class="style">倾斜字体</div>
+    <em class="style-nor">正常字体</em>
+</body>
+</html>
