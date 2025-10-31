@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "启动 Live Server 并预览当前文件",
+      "type": "shell",
+      "command": "echo '请在 HTML 文件上右键选择 Open with Live Server'",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never"
+      }
+    },
+    {
+      "label": "在 Browser Preview 中打开当前文件",
+      "type": "shell",
+      "command": "open",
+      "args": ["${file}"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
