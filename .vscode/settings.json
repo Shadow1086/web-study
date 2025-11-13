@@ -5,26 +5,26 @@
   "volar.completion.normalizeComponentImportName": true,
   "volar.inlayHints.eventArgumentInInlineHandlers": true,
   "volar.inlayHints.eventArgumentInInlineHandlers": true,
-  
+
   // HTML 相关设置
   "html.format.wrapLineLength": 120,
   "html.format.wrapAttributes": "auto",
   "html.format.indentInnerHtml": true,
   "html.autoClosingTags": true,
   "html.autoCreateQuotes": true,
-  
+
   // CSS 相关设置
   "css.validate": true,
   "css.lint.unknownAtRules": "ignore",
   "css.lint.duplicateProperties": "warning",
   "css.completion.completePropertyWithSemicolon": true,
   "css.completion.triggerPropertyValueCompletion": true,
-  
+
   // 文件关联（如果需要）
   "files.associations": {
     "*.vue": "vue"
   },
-  
+
   // 代码格式化设置
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -37,19 +37,19 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  
+
   // 自动保存
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
-  
+
   // 其他实用设置
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.wordWrap": "on",
   "editor.minimap.enabled": true,
-  
+
   // Live Server 设置 - 自动打开当前文件
-  "liveServer.settings.port": 5500,
+  "liveServer.settings.port": 5501,
   "liveServer.settings.CustomBrowser": "Browser Preview",
   "liveServer.settings.donotShowInfoMsg": false,
   "liveServer.settings.donotVerifyTags": false,
@@ -60,27 +60,27 @@
     "**/*.sass",
     "**/*.ts"
   ],
-  
+
   // Browser Preview 设置 - 自动打开当前文件
   "browser-preview.format": "jpeg",
   "browser-preview.chromeExecutable": "",
   "browser-preview.startUrlOnActivate": true,
-  
+
   // Live Preview (Microsoft) 设置 - 自动打开当前文件（推荐使用）
   "livePreview.customExternalBrowser": "Browser Preview",
   "livePreview.serverKeepAliveAfterEmbeddedPreviewClose": true,
   "livePreview.autoRefreshPreview": true,
-  
+
   // 文件打开时自动预览
   "workbench.editor.enablePreview": true,
-  
+
   // 使用 VS Code 内置的 Simple Browser（如果可用）
   // 按 Cmd+Shift+P，输入 "Simple Browser: Show" 可以打开内置浏览器
-  
+
   // Chrome/Edge DevTools 设置
   "debug.javascript.usePreview": true,
   "debug.inlineValues": true,
   "debug.showBreakpointsInOverviewRuler": true,
-  "debug.allowBreakpointsEverywhere": true
+  "debug.allowBreakpointsEverywhere": true,
+  "livePreview.defaultPreviewPath": "/Project/project01.html"
 }
-
