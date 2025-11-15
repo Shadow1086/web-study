@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>语言伪类</title>
+  <style>
+    div:lang(en) {
+      color: red;
+    }
+    :lang(zh-CN) {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div>第一个</div>
+  <div lang="en">second</div>
+  <p>前端</p>
+  <span>第三个</span>
+</body>
+</html>
