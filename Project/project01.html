@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML的介绍</title>
+  </head>
+  <body>
+    <h1>HTML语法基础</h1>
+    <h2>什么是HTML</h2>
+    <p>
+      <b>HTML</b>是一种超文本标记语言(HyperText Markup
+      Language),它定义了网页内容的含义和结构，除了HTML以外的其他技术则通常用来描述一个网页的表现与展示效果（如CSS），或功能与行为（如JavaScript）
+    </p>
+    <p>
+      HTML使用'标记'（markup）来注明文本，图片和其他内容，以便于在Web浏览器中显示
+    </p>
+    <p>
+      HTML元素通过'标签'将文本从文档中引出，标签有在"&lt;"
+      "&gt;"中包裹的元素名组成，HTML里的元素名不区分大小写。也就是说，他们可以使用大写，小写或者是混合形式来书写。例如：&lt;title&gt;、&lt;TITLE&gt;、&lt;Title&gt;或以任何形式。但是习惯上与实践上都推荐将标签名全部小写
+    </p>
+
+    <h3>HTML的标签</h3>
+    <h4>标题标签：&lt;h&gt;</h4>
+    <p>
+      可以使用 &lt;h1&gt; 到 &lt;h6&gt;
+      来创建标题标签，一共可以有六个标题，如下：
+    </p>
+    <pre><code>&lt;h1&gt;我是一级标题&lt;/h1&gt;
+&lt;h2&gt;我是二级标题&lt;/h2&gt;
+&lt;h3&gt;我是三级标题&lt;/h3&gt;
+&lt;h4&gt;我是四级标题&lt;/h4&gt;
+&lt;h5&gt;我是五级标题&lt;/h5&gt;
+&lt;h6&gt;我是六级标题&lt;/h6&gt;</code></pre>
+    <p>效果如下：</p>
+    <h1>我是一级标题</h1>
+    <h2>我是二级标题</h2>
+    <h3>我是三级标题</h3>
+    <h4>我是四级标题</h4>
+    <h5>我是五级标题</h5>
+    <h6>我是六级标题</h6>
+
+    <h3>段落标签</h3>
+    <p>在HTML中通常使用&lt;p&gt;来表示一个段落，例如：</p>
+    <p>这是一个段落，使用&lt;p&gt;来表示</p>
+    <p>
+      那么对于要更改文字样式，则通过&lt;b&gt;,&lt;i&gt;&lt;u&gt;下面是例子：
+    </p>
+    <p>
+      更改文本样式：<i>斜体</i> <u>下划线</u>
+      <b>字体加粗</b>
+    </p>
+
+    <h3>列表</h3>
+    <h4>有序列表</h4>
+    <p>使用</p>
+    <ol>
+      <li>第一个元素</li>
+      <li>第二个元素</li>
+    </ol>
+    <h4>无序列表</h4>
+    <ul>
+      <li>第一个元素</li>
+      <li>第二个元素</li>
+    </ul>
+    <h3>表格标签</h3>
+
+    <table border="1">
+      <tr>
+        <th>列表题1</th>
+        <th>列标题2</th>
+      </tr>
+      <tr>
+        <td>表格数据1</td>
+        <td>表格数据2</td>
+      </tr>
+      <tr>
+        <td>表格数据11</td>
+        <td>表格数据22</td>
+      </tr>
+      <tr>
+        <td>表格数据13</td>
+        <td>表格数据24</td>
+      </tr>
+    </table>
+
+    <h3>属性</h3>
+    <a href="https://google.com">这是一个超链接</a>
+    <br />
+    <a href="https://google.com" target="_blank">这是一个超链接</a>
+
+    <h3>图片</h3>
+    <img src="资源文件/屏幕截图 2025-05-23 183158.png" alt="该图片无法显示" />
+    <img
+      src="资源文件/屏幕截图 2025-05-23 183158.png"
+      alt=""
+      width="100"
+      height="100"
+    /><br />
+    <br />
+
+    <div class="nav">
+      <a href="#">链接1</a>
+      <a href="#">链接2</a>
+      <a href="#">链接3</a>
+      <a href="#">链接4</a>
+    </div>
+
+    <div class="content">
+      <h1>文章标题</h1>
+      <p>文章内容</p>
+      <p>文章内容</p>
+      <p>文章内容</p>
+      <p>文章内容</p>
+      <p>文章内容</p>
+    </div>
+
+    <span>包装文本，属于行内元素，以便于使用CSS等样式来修饰所包含的文本</span>
+    <span>这是第1个span标签</span>
+    <span>这是第2个span标签</span>
+    <span>这是第3个span标签</span>
+    <span>这是第4个span标签</span>
+    <span>链接点击这里<a href="#">链接</a></span>
+
+    <h3>表单</h3>
+
+    <form action="#"> 
+      <label>用户名：</label>
+
+      <input type="text" placeholder="请输入内容" />
+      <br>
+      <label>密码框：</label>
+      <input type="password" placeholder="请输入内容" />
+      <br>
+      <label>性别：</label>
+      <input type="radio" name="gender" />
+      <label>男</label>
+      <input type="radio" name="gender"/>
+      <label>女</label>
+<br>
+      <label for="hobby">爱好：</label>
+      <input type="checkbox" id="hobby">唱歌
+      <input type="checkbox" id="hobby">跳舞
+      <input type="checkbox" id = "hobby">rap
+<br>
+      <input type="submit" value = "上传">
+    </form>
+  </body>
+</html>
