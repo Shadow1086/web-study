@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选择器优先级详细</title>
+  <style>
+    .containers span.lorem4 {
+      color: red;
+    }
+    div>p>span:nth-child(1) {
+      color: green;
+    }
+    .lorem4 {
+      color: aqua !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="containers">
+    <p>
+      <span class="lorem4">Lorem ipsum dolor sit.</span>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+    </p>
+  </div>
+</body>
+</html>
