@@ -5,13 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>伪元素选择器</title>
   <style>
+    /*
+      选中的是第一个文字：伪元素
+    */
     div::first-letter {
       color: red;
       font-size: 50px;
+    }
+    /*
+      选中的是第一行，随着窗口的变化而变化
+    */
+    div::first-line {
+      background-color: gray;
+    }
+    /*
+      选中的是div中被鼠标选择的文字
+    */
+    div::selection {
+      background-color: green;
+      color: orange;
+    }
+    /*
+      选中的是input元素中的提示文字
+    */
+    input::placeholder {
+      color: skyblue;
+    }
+    /*
+      在p标签前面或者后面添加文本
+    */
+    p::before {
+      content:"¥";
+    }
+    p::after {
+      content:".00"
     }
   </style>
 </head>
 <body>
   <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptates eaque. Molestias illum ullam nobis, suscipit hic sapiente, necessitatibus, in numquam minima laborum eaque. A sequi libero aut quisquam eos.</div>
+  <input type="text" placeholder="请输入您的用户名">
+  <p>199</p>
+  <p>299</p>
+  <p>399</p>
+  <p>499</p>
+
 </body>
 </html>
