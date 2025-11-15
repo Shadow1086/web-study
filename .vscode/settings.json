@@ -29,13 +29,50 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[vue]": {
-    "editor.defaultFormatter": "Vue.volar"
+    "editor.defaultFormatter": "Vue.volar",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    },
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.autoClosingBrackets": "languageDefined",
+    "editor.autoClosingQuotes": "languageDefined",
+    "editor.snippetSuggestions": "top",
+    "editor.suggest.showSnippets": true
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    },
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.autoClosingBrackets": "languageDefined",
+    "editor.autoClosingQuotes": "languageDefined",
+    "editor.snippetSuggestions": "top",
+    "editor.suggest.showSnippets": true,
+    "editor.tabCompletion": "on"
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    },
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.autoClosingBrackets": "languageDefined",
+    "editor.autoClosingQuotes": "languageDefined",
+    "editor.snippetSuggestions": "top",
+    "editor.suggest.showSnippets": true
   },
 
   // 自动保存
@@ -82,5 +119,10 @@
   "debug.inlineValues": true,
   "debug.showBreakpointsInOverviewRuler": true,
   "debug.allowBreakpointsEverywhere": true,
-  "livePreview.defaultPreviewPath": "/Project/project01.html"
+  "livePreview.defaultPreviewPath": "/03-CSS基础/02内部样式.html",
+
+  // AI 模型指定（可选）
+  "cursor.chat.model": "gpt-4o-latest",
+  "cursor.completion.model": "gpt-4o-latest",
+  "cursor.agent.model": "gpt-4o-latest"
 }
