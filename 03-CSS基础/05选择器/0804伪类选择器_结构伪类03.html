@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>结构伪类03</title>
+  <style>
+    /*
+      选中的是div中倒数第n个儿子的p元素，按照所有同类型的兄弟
+    */
+    div>p:nth-of-type(5) {
+      color: red;
+    }
+    /*
+      选中的是没有兄弟的span元素
+    */
+    span:only-child {
+      color: aqua;
+    }
+    /*
+      选中的是没有同类型兄弟的span元素
+    */
+    span:only-of-type {
+      color: antiquewhite;
+    }
+    /*
+      选中的是html根元素
+    */
+    :root {
+      background-color: burlywood;
+    }
+    /*
+      选中的是没有内容的div元素，哪怕有空格都不算没有内容
+    */
+    div:empty {
+      width: 100px;
+      height: 100px;
+      background-color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <span>测试1</span>
+    <p>张三：98分</p>
+    <p>李四：88分</p>
+    <p>王五：78分</p>
+    <p>赵六：57分</p>
+    <p>孙七：45分</p>
+    <p>老八：32分</p>
+    <span>测试2</span>
+  </div>
+  <hr>
+  <div>
+    <span>结构二</span>
+    <p>张三：98分</p>
+    <p>老八：32分</p>
+  </div>
+  <div></div>
+</body>
+</html>
