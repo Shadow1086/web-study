@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>子代选择器</title>
+  <style>
+    /*
+      想要让div下的a标签变为红色，但不让p中的a标签变红色，就需要子代选择器
+    */
+    /*
+      div a {
+      color: red;
+    }
+    */
+      div>a{
+        color: red;
+      }
+      div>p>a {
+        color: aqua;
+      }
+      #foot>a {
+        color: antiquewhite;
+      }
+      div .foot > a {
+        color: black;
+      }
+    
+  </style>
+</head>
+<body>
+  <div>
+    <a href="#">张三</a>
+    <a href="#">李四</a>
+    <a href="#">王五</a>
+    <p>
+      <a href="#">赵六</a>
+      <div id="foot">
+        <a href="#">孙七</a>
+      </div>
+    </p>
+    
+  </div>
+</body>
+</html>

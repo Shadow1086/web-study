@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>属性选择器</title>
+    <style>
+      /*
+  * 第一种写法：选中具有title属性的元素
+  */
+      [title] {
+        color: red;
+      }
+      /*
+      选中具有title属性，并且属性值为atguigu2的元素
+    */
+      [title="atguigu2"] {
+        color: blue;
+      }
+      /*
+      第三种方法：选中具有title属性，且属性值以字母b开头的元素
+    */
+      [title^="b"] {
+        color: aqua;
+      }
+      /*
+      第四种方法：选中具有title属性，且属性值以4结尾的元素
+    */
+      [title$="4"] {
+        color: black;
+      }
+      /*
+      第五种：title中属性值有5的元素
+    */
+      [title*="5"] {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div title="atguigu1">尚硅谷1方法一：[title]</div>
+    <div title="atguigu2">尚硅谷2方法二：[title = "atguigu2"]</div>
+    <div title="btguigu3">尚硅谷3方法三：[title^="b"]</div>
+    <div title="atguigu4">尚硅谷4方法四：[title$="4"]</div>
+    <div title="atguigu5">尚硅谷5方法五：[title*="5"]</div>
+  </body>
+</html>

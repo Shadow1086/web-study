@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动态伪类</title>
+    <style>
+      a:link {
+        color: orange;
+      }
+
+      a:visited {
+        color: gray;
+      }
+      /*
+      选中的是鼠标悬浮状态的a元素
+    */
+      a:hover {
+        color: aquamarine;
+      }
+      /*
+      选中的是激活状态的a元素，就是点击一瞬间的时刻
+    */
+      a:active {
+        color: green;
+      }
+      span:hover {
+        color: aqua;
+      }
+      /*
+      只有表单类型的元素才可以使用focus
+    */
+      input:focus,
+      select:focus {
+        color: orange;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.baidu.com">百度</a>
+    <br />
+    <a href="https://www.jd.com">京东</a>
+    <br />
+    <span>尚硅谷</span>
+    <br />
+    <input type="text" />
+    <br />
+    <input type="text" />
+    <br />
+    <input type="text" />
+    <br />
+    <select>
+      <option value="beijing">北京</option>
+      <option value="shanghai">上海</option>
+    </select>
+  </body>
+</html>

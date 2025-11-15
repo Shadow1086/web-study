@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>结构伪类01</title>
+  
+  <style>
+    /*
+      方式一：选中的时div的第一个儿子的p元素
+    */
+    div>p:first-child {
+      color:red;
+    }
+    /*
+      方式二：看结构三：选中的div的后代p元素，且p的父级是谁无所谓，但p必须是其父亲的第一个儿子
+    */
+    div p:first-child {
+      color:red;
+    }
+    /*
+      方式三：看结构三：只要p是其父亲的第一个儿子就会被选中
+    */
+    p:first-child {
+      color:red;
+    }
+  </style>
+</head>
+<body>
+  <!--结构1-->
+  <div>
+    <p>张三：98分</p>
+    <p>李四：88分</p>
+    <p>王五：78分</p>
+    <p>赵六：57分</p>
+  </div>
+  <hr>
+  <!--结构2-->
+  <div>
+    <!--如果使用结构一的话，李四并不会被选中-->
+    <span>张三：98分</span>
+    <p>李四：88分</p>
+    <p>王五：78分</p>
+    <p>赵六：57分</p>
+  </div>
+  <hr>
+
+  <!--结构3-->
+  <p>测试1</p>
+  <div>
+    <!--如果使用结构一的话，李四并不会被选中-->
+    <p>测试2</p>
+    <marquee>
+      <p>测试3</p>
+      <p>张三：98分</p>
+    </marquee>
+    <p>李四：88分</p>
+    <p>王五：78分</p>
+    <p>赵六：57分</p>
+  </div>
+</body>
+</html>
