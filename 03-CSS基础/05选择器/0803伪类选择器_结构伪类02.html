@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>结构伪类02</title>
+  <style>
+    /* 方式一：选中的时div的最后一个儿子的p元素 */
+     /* div>p:last-child {
+      color:red;
+    } */
+    /* 选中的是div的第n个儿子 */
+    div>p:nth-child(3){
+      color: red;
+    }
+    /* 选中的是偶数个数的儿子元素 */
+    div>p:nth-child(2n){
+      color: aqua;
+    }
+/* 选中的是div的第一个儿子p元素（按照所有同类型的兄弟计算） */
+    div>p:first-of-type{
+      color: blue;
+    }
+    /* 选中的是div的最后一个儿子p元素（按照所有同类型的兄弟计算） */
+    div>p:last-of-type{
+      color: gray;
+    }
+/* 选中的是div的第n个儿子p元素（按照所有同类型的兄弟计算） */
+div>p:nth-of-type(3){
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>张三：98分</p>
+    <p>李四：88分</p>
+    <p>王五：78分</p>
+    <p>赵六：57分</p>
+    <p>孙七：45分</p>
+    <p>老八：32分</p>
+  </div>
+  <hr><!--
+    结构二
+  -->
+  <div>
+    <span>结构二</span>
+    <p>张三：98分</p>
+    <p>李四：88分</p>
+    <p>王五：78分</p>
+    <p>赵六：57分</p>
+    <p>孙七：45分</p>
+    <p>老八：32分</p>
+  </div>
+</body>
+</html>
