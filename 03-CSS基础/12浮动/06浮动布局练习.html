@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>浮动练习</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+            .leftfix {
+                float: left;
+            }
+            .rightfix {
+                float: right;
+            }
+            .clearfix::after {
+                clear: both;
+                content: "";
+                display: block;
+            }
+            .container {
+                width: 960px;
+                /* 放置于中心 */
+                margin: 0 auto;
+            }
+            .page-header {
+                height: 80px;
+            }
+            .logo {
+                width: 200px;
+            }
+            .banner1 {
+                width: 540px;
+                margin: 0 10px;
+            }
+            .banner2 {
+                width: 200px;
+            }
+            .logo,
+            .banner1,
+            .banner2 {
+                height: 80px;
+                background-color: #ccc;
+                line-height: 80px;
+            }
+            /* 菜单效果 */
+            .menu {
+                margin-top: 10px;
+                width: 960px;
+                height: 30px;
+                line-height: 30px;
+                background-color: #ccc;
+            }
+
+            .content {
+                margin-top: 10px;
+            }
+            .item1,
+            .item2 {
+                border: 1px solid black;
+                height: 198px;
+                width: 368px;
+                line-height: 50px;
+                margin-right: 10px;
+            }
+            .item3,
+            .item4,
+            .item5,
+            .item6 {
+                border: 1px solid black;
+                float: left;
+                width: 178px;
+                height: 198px;
+                margin-right: 10px;
+            }
+            .bottom {
+                margin-top: 10px;
+            }
+            .item7,
+            .item8,
+            .item9 {
+                height: 128px;
+                width: 198px;
+                border: 1px solid black;
+                margin-bottom: 10px;
+            }
+            .footer {
+                background-color: #ccc;
+                height: 60px;
+                width: 960px;
+                line-height: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- 头部 -->
+            <div class="page-header clearfix">
+                <div class="logo leftfix">logo</div>
+                <div class="banner1 leftfix">banner1</div>
+                <div class="banner2 leftfix">banner2</div>
+            </div>
+            <!-- 菜单 -->
+            <div class="menu">菜单</div>
+            <!-- 内容区 -->
+            <div class="content clearfix">
+                <!-- 左侧  -->
+                <div class="left leftfix">
+                    <!-- 栏目一，二    上侧 -->
+                    <div class="top clearfix">
+                        <div class="item1 leftfix">栏目一</div>
+                        <div class="item2 leftfix">栏目二</div>
+                    </div>
+                    <!-- 下侧 -->
+                    <div class="bottom clearfix">
+                        <div class="item3 leftfix">栏目三</div>
+                        <div class="item4 leftfix">栏目四</div>
+
+                        <div class="item5 leftfix">栏目五</div>
+                        <div class="item6 leftfix">栏目六</div>
+                    </div>
+                </div>
+                <!-- 右侧 -->
+                <div class="right rightfix">
+                    <div class="item7">栏目七</div>
+                    <div class="item8">栏目八</div>
+                    <div class="item9">栏目九</div>
+                </div>
+            </div>
+
+            <!-- 页尾 -->
+            <div class="footer">页尾</div>
+        </div>
+    </body>
+</html>
