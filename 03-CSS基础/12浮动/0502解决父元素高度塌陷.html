@@ -1,0 +1,83 @@
+<!-- 
+  解决父元素高度塌陷：给父元素设置高度
+  设计原则：
+    一个父元素中的子元素要么全部浮动，要么全部不浮动
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>解决浮动带来的影响</title>
+        <style>
+            .outer {
+                width: 500px;
+                background-color: gray;
+                border: 1px solid black;
+                /* 方案一：设置高度 */
+                /* height: 120px; */
+
+                /* 方案二：给父元素也设置为浮动,不推荐 */
+                /* float: left; */
+
+                /* 方案三：overflow 并不会完美解决问题*/
+                /* overflow: hidden; */
+
+                /* 方案四：给box4添加clear属性 */
+            }
+            .box4 {
+                /* 消除此元素左右浮动兄弟产生的影响，
+              但如果其本身也是浮动，那么就会换行显示 */
+                clear: both;
+                /* clear不能给行内元素 */
+                /* display:  inline; */
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: skyblue;
+                border: 1px solid black;
+                margin: 10px;
+            }
+            .box1,
+            .box3,
+            .box2 {
+                float: left;
+            }
+            .lorem {
+                display: inline-block;
+            }
+            /* 方案五：最好的解决方案
+            前提：之前的所有元素都是浮动的，如果出现一个不浮动的就会打乱 */
+            .outer::after {
+              content: '';
+              display: block;
+              clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <div class="box box1">盒子1</div>
+            <div class="box box2">盒子2</div>
+            <div class="box box3">盒子3</div>
+            <div class="box box4">盒子4</div>
+            <!-- 若所有元素皆为浮动，添加一下的div使得上述元素撑起父元素 -->
+            <!-- <div class="magic" style = "clear:both;"></div> -->
+        </div>
+        <div class="lorem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor illum
+            ea aliquam nostrum voluptas error quos consequuntur aliquid, optio
+            at saepe delectus aspernatur provident deleniti modi corrupti
+            corporis id accusantium unde reiciendis. Reiciendis, blanditiis! Et
+            doloremque cum quaerat sit velit? Nemo, temporibus quod magnam nulla
+            eligendi exercitationem qui voluptas neque odit perferendis
+            cupiditate quae id, error, delectus non quibusdam dolore architecto?
+            Explicabo officiis perspiciatis assumenda adipisci ipsa non culpa,
+            obcaecati beatae minus, cum nihil ad inventore? Iste ex earum
+            suscipit numquam, id magnam dolor illum exercitationem quidem
+            repellat reprehenderit inventore incidunt neque voluptatum
+            architecto officiis vitae aperiam quis blanditiis dicta.
+        </div>
+    </body>
+</html>
