@@ -1,0 +1,40 @@
+<!-- 
+  解决兄弟被挤到下方：将兄弟设置为行内元素即可
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>解决浮动带来的影响</title>
+  <style>
+    .outer {
+      width:500px;
+      background-color: gray;
+      border: 1px solid black;
+    }
+    .box {
+      width: 100px;
+      height:100px;
+      background-color: skyblue;
+      border: 1px solid black;
+      margin: 10px;
+    }
+    .box1,.box3,.box2 {
+      float: left;
+    }
+    .box4 {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="box box1">盒子1</div>
+    <div class="box box2">盒子2</div>
+    <div class="box box3">盒子3</div>
+        <div class="box box4">盒子4</div>
+
+  </div>
+</body>
+</html>
