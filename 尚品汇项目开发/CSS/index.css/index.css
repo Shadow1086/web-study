@@ -1,0 +1,80 @@
+/* 版心的宽高 */
+
+.container {
+    width: 1190px;
+    margin: 0 auto;
+    /* background-color: orange; */
+}
+
+/* 左，右浮动 */
+.leftfix {
+    float: left;
+}
+.rightfix {
+    float: right;
+}
+.clearfix {
+    clear: both;
+}
+/* #region顶部导航条 */
+/* 顶部导航条样式 */
+.topbar {
+    height: 30px;
+    background-color: #ececec;
+}
+
+/* 顶部导航条中元素的样式 */
+.welcome,
+.topbar-nav {
+    line-height: 30px;
+}
+.welcome {
+    font-size: 0;
+}
+.welcome span,
+a {
+    font-size: 12px;
+    color: #666;
+    height: 16px;
+}
+.hello {
+    margin-right: 28px;
+}
+
+.welcome .logIn {
+    padding-right: 10px;
+    border-right: 1px solid black;
+}
+.welcome .register {
+    padding-left: 10px;
+}
+
+.topbar-nav .list li {
+    float: left;
+}
+.topbar-nav .list li a {
+    border-right: 1px solid black;
+    padding: 0 15px;
+}
+.topbar-nav .list li:first-child a {
+  padding-left: 0;
+}
+.topbar-nav .list li:last-child a
+{
+  padding-right: 0;
+  border-right:1px hidden black;
+}
+
+/* logo和搜索栏 */
+.logo {
+    width: 190px;
+    height: 120px;
+}
+#search {
+    width: 510px;
+    height: 36px;
+    line-height: 36px;
+}
+/* #endregion 顶部导航条结束 */
+
+
