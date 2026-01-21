@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>绝对定位</title>
+  <style>
+    .outer {
+      width: 500px;
+      background-color: skyblue;
+      padding: 10px;
+      position: relative;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+    }
+    .box1 {
+      background-color: #888;
+    }
+    .box2 {
+      background-color: orange;
+      position: fixed;
+      top: 218px;
+      left: 218px;
+      transition: 1s all linear;
+    }
+    .box3 {
+      background-color: green;
+    }
+    .outer:hover .box2 {
+      left: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="box box1">盒子1</div>
+    <div class="box box2">盒子2</div>
+    <div class="box box3">盒子3</div>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat debitis deleniti neque cumque earum deserunt laudantium quos, magni exercitationem cupiditate non, molestiae nesciunt ipsa eaque tempore saepe inventore possimus! Veritatis, eveniet voluptas suscipit delectus quod at enim ad repudiandae odio eligendi exercitationem. Molestiae dolor quasi perspiciatis accusantium minima? Maxime laborum voluptas reiciendis fugit doloremque itaque quaerat? Quidem asperiores magnam aliquam odit soluta deserunt quam iusto dolor temporibus omnis, sed consequatur, veritatis tempora! A laudantium consequatur alias. Itaque molestias excepturi quibusdam. Culpa dignissimos dolorem sit! Magnam quasi corporis asperiores dolores possimus, est, quae sequi nisi facere esse delectus praesentium perferendis adipisci?</div>
+  </div>
+</body>
+</html>
