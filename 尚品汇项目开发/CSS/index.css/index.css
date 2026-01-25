@@ -98,3 +98,33 @@ a {
 }
 
 /* #endregion */
+
+/* #region 主导航区 */
+.head_nav {
+    height: 48px;
+    border-bottom: 1px solid #DD302D;
+}
+.head_nav .all_types {
+    background-color: #DD302D;
+    width: 190px;
+    height: 48px;
+    color: white;
+    line-height: 48px;
+    text-align: center;
+    font-size: 16px;
+}
+.head_nav .container .head_list {
+    height: 48px;
+    line-height: 48px;
+}
+.head_list li {
+    float: left;
+    margin: 0 10px;
+}
+.head_list li a {
+    font-size: 16px;
+    color: #333;
+}
+
+/* #endregion 主导航区结束 */
+
