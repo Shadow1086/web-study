@@ -57,15 +57,18 @@ a {
     padding: 0 15px;
 }
 .topbar-nav .list li:first-child a {
-  padding-left: 0;
+    padding-left: 0;
 }
-.topbar-nav .list li:last-child a
-{
-  padding-right: 0;
-  border-right:1px hidden black;
+.topbar-nav .list li:last-child a {
+    padding-right: 0;
+    border-right: 1px hidden black;
 }
+/* #endregion 顶部导航条结束 */
 
-/* logo和搜索栏 */
+/* #region logo和搜索栏 */
+.page-header {
+    height: 120px;
+}
 .logo {
     width: 190px;
     height: 120px;
@@ -75,6 +78,23 @@ a {
     height: 36px;
     line-height: 36px;
 }
-/* #endregion 顶部导航条结束 */
+.page-header .search form{
+    margin-top: 42px;
+    font-size: 0;
+}
+.page-header .search input {
+    height: 34px;
+    width: 508px;
+    border: 1px solid #DD302D ;
+}
+.page-header .search  button {
+    height: 36px;
+    width: 80px;
+    background-color: #DD302D;
+    vertical-align: top;
+    background-image: url('../../resources/serch_icon.png');
+    background-repeat: no-repeat;
+    background-position: 28px 6px;
+}
 
-
+/* #endregion */
