@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>自定义对象</title>
+    </head>
+    <body>
+        <script>
+            // let user = {
+            //   name:"alicy",
+            //   age:20,
+            //   intruction : function() {
+            //     // alert("大家好,我叫"+this.name+"今年"+this.age+"岁");
+            //     alert(`大家好，我叫${name},今年${age}岁`)
+            //   }
+            // };
+
+            // let user = {
+            //     name: "alicy",
+            //     age: 20,
+            //     intruction() {
+            //         // alert("大家好,我叫"+this.name+"今年"+this.age+"岁");
+            //         alert(`大家好，我叫${name},今年${age}岁`);
+            //     },
+            // };
+
+            let user = {
+                name: "alicy",
+                age: 20,
+                intruction: () => { //注意：在箭头函数中，this不指向当前对象，而是指向对象的父集[所以不推荐使用箭头函数]
+                    // alert("大家好,我叫"+this.name+"今年"+this.age+"岁");
+                    alert(`大家好，我叫${name},今年${age}岁`);
+                },
+            };
+            user.intruction();
+            alert(user.name);
+        </script>
+    </body>
+</html>
