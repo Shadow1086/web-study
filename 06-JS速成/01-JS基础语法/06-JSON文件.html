@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JSON文件</title>
+    </head>
+    <body>
+        <script>
+            // let person = {
+            //     name: "tom",
+            //     age: 20,
+            //     gender: "male",
+            //     sayHello: function () {
+            //         alert(
+            //             `hello,my name is ${this.name},i'm${this.age} years old.My gender is ${this.gender}`
+            //         );
+            //     },
+            // };
+            let person = {
+                name: "tom",
+                age: 20,
+                gender: "male",
+                sayHello() {
+                    alert(
+                        `hello,my name is ${this.name},i'm${this.age} years old.My gender is ${this.gender}`
+                    );
+                },
+            };
+            // alert(person); //将JS对象转换为字符串
+            // alert(JSON.stringify(person));
+
+            //将JSON转化为js对象
+            let stringForJson = `{"name":"tom","age":20,"gender":"male"}`;
+            alert(JSON.parse(stringForJson));
+        </script>
+    </body>
+</html>
