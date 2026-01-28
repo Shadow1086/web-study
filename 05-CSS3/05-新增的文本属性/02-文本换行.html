@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文本换行</title>
+  <style>
+    div {
+      width: 400px;
+      height: 400px;
+      border: 1px solid black;
+      font-size: 30px;
+      /* 按原文显示 */
+      white-space: pre;
+      /* 容器不够大时自动换行 */
+      white-space: pre-wrap;
+      /* 每句话最左侧和最右侧无效空格去掉，即只认换行 */
+      white-space: pre-line;
+      /* 所有均不换行 */
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    山回路转不见君
+    雪上空留马行处
+    山回路转不见君山回路转不见君山回路转不见君山回路转不见君
+    雪上空留马行处
+    山回路转不见君
+    雪上空留马行处
+    山回路转不见君
+    雪上空留马行处
+  </div>
+</body>
+</html>
