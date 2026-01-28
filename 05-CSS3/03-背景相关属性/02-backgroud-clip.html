@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>background-clip</title>
+        <style>
+            .box1 {
+                width: 400px;
+                height: 400px;
+                background-color: skyblue;
+                margin: 0 auto;
+                font-size: 120px;
+                padding: 50px;
+                border: 50px dashed black;
+                font-weight: bold;
+                color: transparent;
+
+
+                background-image: url("../../资源文件/悟空.jpg");
+                background-repeat: no-repeat;
+                /* border以外的背景图不可见，默认值 */
+                /* background-clip: border-box; */
+
+                /* padding以外的背景图不可见，背景颜色也不可见 */
+                /* background-clip: padding-box; */
+                /* content以外的背景图和背景色都不可见 */
+                /* background-clip: content-box; */
+
+                /* 配合文字透明，即可实现背景图只呈现在文字上 */
+                background-clip: text;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">你好啊</div>
+    </body>
+</html>
