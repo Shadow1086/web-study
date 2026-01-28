@@ -152,7 +152,7 @@ h1 {
 <h1 class="speak" class="big">你好啊</h1>
 ```
 
-4. 一个元素可以写多个 class 值（在同一个 class 属性中用空格分隔），下面是正确示例：
+1. 一个元素可以写多个 class 值（在同一个 class 属性中用空格分隔），下面是正确示例：
 
 ```html
 <!-- 该写法正确，多个类名用空格分隔 -->
@@ -660,7 +660,7 @@ div {
 1. 使用字体的英文名字兼容性会更好，具体的英文名可以自行查询，或在电脑的设置里去寻找。
 2. 如果字体名包含空格，必须使用引号包裹起来。
 3. 可以设置多个字体，按照从左到右的顺序逐个查找，找到就用，没有找到就使用后面
-的，且通常在最后写上 `serif` （衬线字体）或 `sans-serif` （非衬线字体）。
+   的，且通常在最后写上 `serif` （衬线字体）或 `sans-serif` （非衬线字体）。
 4. windows 系统中，默认的字体就是微软雅黑。
 
 ### 10.3 字体风格
@@ -700,7 +700,7 @@ div {
 - `bold` - 粗
 - `bolder` - 很粗（多数字体不支持）
 
-2. 数值
+1. 数值
 
 - 100\~1000 且无单位，数值越大，字体越粗（或一样粗，具体得看字体设计时的精确程度）
 - 100\~300 等同于 `lighter`，400\~500 等同于 `normal`，600 及以上等同于 `bold`
@@ -890,7 +890,7 @@ div {
 }
 ```
 
-2. 居中：对于单行文字，让 height = line-height 即可。
+1. 居中：对于单行文字，让 height = line-height 即可。
    - 问题：多行文字垂直居中怎么办？—— 后面我们用定位去做。
 
 示例:
@@ -902,7 +902,7 @@ div {
 }
 ```
 
-3. 底部：对于单行文字，目前一个临时的方式：
+1. 底部：对于单行文字，目前一个临时的方式：
    - 让 line-height = ( height × 2 ) - font-size - x ;x可以自己测，5，15都可以，x可以忽略
    - 备注： x 是根据字体族，动态决定的一个值。
 
@@ -1002,42 +1002,42 @@ cursor: url("./arrow.png"),pointer;
 ### 16.2  元素的显示模式
 
 - 块元素（block）又称：块级元素
-
+  
   - 特点：
-
- ```
- 1. 在页面中独占一行，不会与任何元素共用一行，是从上到下排列的。
- 2. 默认宽度：撑满父元素。
- 3. 默认高度：由内容撑开。
- 4. 可以通过 CSS 设置宽高。
- ```
+  
+  ```
+  1. 在页面中独占一行，不会与任何元素共用一行，是从上到下排列的。
+  2. 默认宽度：撑满父元素。
+  3. 默认高度：由内容撑开。
+  4. 可以通过 CSS 设置宽高。
+  ```
 
 - 行内元素（inline）又称：内联元素
-
+  
   - 特点:
-
- ```
- 1. 在页面中不独占一行，一行中不能容纳下的行内元素，会在下一行继续从左到右排列。
-
- 2. 默认宽度：由内容撑开。
-
- 3. 默认高度：由内容撑开。
- 4. 无法通过 CSS 设置宽高。
- ```
+  
+  ```
+  1. 在页面中不独占一行，一行中不能容纳下的行内元素，会在下一行继续从左到右排列。
+  
+  2. 默认宽度：由内容撑开。
+  
+  3. 默认高度：由内容撑开。
+  4. 无法通过 CSS 设置宽高。
+  ```
 
 - 行内块元素（inline-block）又称：内联块元素
-
+  
   - 特点：
-
- ```
- 1. 在页面中不独占一行，一行中不能容纳下的行内元素，会在下一行继续从左到右排列。
- 
- 2. 默认宽度：由内容撑开。
- 
- 3. 默认高度：由内容撑开。
- 
- 4. 可以通过 CSS 设置宽高。
- ```
+  
+  ```
+  1. 在页面中不独占一行，一行中不能容纳下的行内元素，会在下一行继续从左到右排列。
+  
+  2. 默认宽度：由内容撑开。
+  
+  3. 默认高度：由内容撑开。
+  
+  4. 可以通过 CSS 设置宽高。
+  ```
 
 ### 16.3 总结各元素的显示模式
 
@@ -1053,21 +1053,23 @@ cursor: url("./arrow.png"),pointer;
 行内元素（inline）
 
 1. 文本标签： <br> 、 <em> 、 <strong> 、 <sup> 、 <sub> 、 <del> 、 <ins> 2. <a> 与 <label>
-行内块元素（inline-block）
+   行内块元素（inline-block）
 
-1. 图片： <img>
-2. 单元格： <td> 、 <th>
-3. 表单控件： <input> 、 <textarea> 、 <select> 、 <button> 4. 框架标签： <iframe>
+2. 图片： <img>
+
+3. 单元格： <td> 、 <th>
+
+4. 表单控件： <input> 、 <textarea> 、 <select> 、 <button> 4. 框架标签： <iframe>
 
 ### 16.4 修改元素的显示模式
 
 通过 CSS 中的 display 属性可以修改元素的默认显示模式，常用值如下：
 
-| 值           | 描述                       |
-| ------------ | -------------------------- |
-| none         | 元素会被隐藏。             |
-| block        | 元素将作为块级元素显示。   |
-| inline       | 元素将作为内联元素显示。   |
+| 值            | 描述            |
+| ------------ | ------------- |
+| none         | 元素会被隐藏。       |
+| block        | 元素将作为块级元素显示。  |
+| inline       | 元素将作为内联元素显示。  |
 | inline-block | 元素将作为行内块元素显示。 |
 
 ### 16.5 盒子模型的组成
@@ -1078,21 +1080,21 @@ CSS 会把所有的 HTML 元素都看成一个盒子，所有的样式也都是�
 2. border（边框）： 盒子的边框。
 3. padding（内边距）： 紧贴内容的补白区域。
 4. content（内容）：元素中的文本或后代元素都是它的内容。
-图示如下：
-![][image-7]
-盒子的大小 = content  +   左右 padding  +   左右 border 。
-注意：外边距 margin 不会影响盒子的大小，但会影响盒子的位置。
+   图示如下：
+   ![][image-7]
+   盒子的大小 = content  +   左右 padding  +   左右 border 。
+   注意：外边距 margin 不会影响盒子的大小，但会影响盒子的位置。
 
 ### 16.6 盒子内容区
 
-| CSS 属性名 | 功能 | 属性值 |
-| --- | --- | --- |
-| width | 设置内容区域宽度 | 长度 |
-| max-width | 设置内容区域的最大宽度 | 长度 |
-| min-width | 设置内容区域的最小宽度 | 长度 |
-| height | 设置内容区域的高度 | 长度 |
-| max-height | 设置内容区域的最大高度 | 长度 |
-| min-height | 设置内容区域的最小高度 | 长度 |
+| CSS 属性名    | 功能          | 属性值 |
+| ---------- | ----------- | --- |
+| width      | 设置内容区域宽度    | 长度  |
+| max-width  | 设置内容区域的最大宽度 | 长度  |
+| min-width  | 设置内容区域的最小宽度 | 长度  |
+| height     | 设置内容区域的高度   | 长度  |
+| max-height | 设置内容区域的最大高度 | 长度  |
+| min-height | 设置内容区域的最小高度 | 长度  |
 
 注意：
 max-width 、 min-width 一般不与 width 一起使用。
@@ -1107,13 +1109,13 @@ max-height 、 min-height 一般不与 height 一起使用。
 
 ### 16.8 盒子内边距（padding）
 
-| CSS 属性名 | 功能 | 属性值 |
-| --- | --- | --- |
-| padding-top | 上内边距 | 长度 |
-| padding-right | 右内边距 | 长度 |
-| padding-bottom | 下内边距 | 长度 |
-| padding-left | 左内边距 | 长度 |
-| padding | 复合属性 | 长度，可以设置 1 ~ 4 个值 |
+| CSS 属性名        | 功能   | 属性值              |
+| -------------- | ---- | ---------------- |
+| padding-top    | 上内边距 | 长度               |
+| padding-right  | 右内边距 | 长度               |
+| padding-bottom | 下内边距 | 长度               |
+| padding-left   | 左内边距 | 长度               |
+| padding        | 复合属性 | 长度，可以设置 1 ~ 4 个值 |
 
 #### padding 复合属性的使用规则(按照顺时针方向)
 
@@ -1130,29 +1132,29 @@ max-height 、 min-height 一般不与 height 一起使用。
 
 ### 16.9 盒子边框（border）
 
-| CSS 属性名 | 功能 | 属性值 |
-| --- | --- | --- |
-| border-style | 边框线风格 | 复合了四个方向的边框风格，可选值：none (默认)、solid (实线)、dashed (虚线)、dotted (点线)、double (双实线) 等 |
-| border-width | 边框线宽度 | 复合了四个方向的边框宽度，长度，默认 3px |
-| border-color | 边框线颜色 | 复合了四个方向的边框颜色，颜色，默认黑色 |
-| border | 复合属性 | 值没有顺序和数量要求 |
-| border-left<br>border-left-style<br>border-left-width<br>border-left-color | 左边框相关属性 | 同上 |
-| border-right<br>border-right-style<br>border-right-width<br>border-right-color | 右边框相关属性 | 同上 |
-| border-top<br>border-top-style<br>border-top-width<br>border-top-color | 上边框相关属性 | 同上 |
-| border-bottom<br>border-bottom-style<br>border-bottom-width<br>border-bottom-color | 下边框相关属性 | 同上 |
+| CSS 属性名                                                                            | 功能      | 属性值                                                                          |
+| ---------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------- |
+| border-style                                                                       | 边框线风格   | 复合了四个方向的边框风格，可选值：none (默认)、solid (实线)、dashed (虚线)、dotted (点线)、double (双实线) 等 |
+| border-width                                                                       | 边框线宽度   | 复合了四个方向的边框宽度，长度，默认 3px                                                       |
+| border-color                                                                       | 边框线颜色   | 复合了四个方向的边框颜色，颜色，默认黑色                                                         |
+| border                                                                             | 复合属性    | 值没有顺序和数量要求                                                                   |
+| border-left<br>border-left-style<br>border-left-width<br>border-left-color         | 左边框相关属性 | 同上                                                                           |
+| border-right<br>border-right-style<br>border-right-width<br>border-right-color     | 右边框相关属性 | 同上                                                                           |
+| border-top<br>border-top-style<br>border-top-width<br>border-top-color             | 上边框相关属性 | 同上                                                                           |
+| border-bottom<br>border-bottom-style<br>border-bottom-width<br>border-bottom-color | 下边框相关属性 | 同上                                                                           |
 
 边框相关属性共 20 个。
 border-style 、 border-width 、 border-color 其实也是复合属性。
 
 ### 16.10 盒子外边距_margin
 
-|CSS 属性名|功能属性值|
-|---------|---------|
-|margin-left|左外边距CSS 中的长度值|
-|margin-right|右外边距CSS 中的长度值|
-|margin-top|上外边距CSS 中的长度值|
-|margin-bottom|下外边距CSS 中的长度值|
-|margin|复合属性，可以写 1~4 个值，规律同 padding （顺时针）CSS 中的长度值|
+| CSS 属性名       | 功能属性值                                      |
+| ------------- | ------------------------------------------ |
+| margin-left   | 左外边距CSS 中的长度值                              |
+| margin-right  | 右外边距CSS 中的长度值                              |
+| margin-top    | 上外边距CSS 中的长度值                              |
+| margin-bottom | 下外边距CSS 中的长度值                              |
+| margin        | 复合属性，可以写 1~4 个值，规律同 padding （顺时针）CSS 中的长度值 |
 
 **margin 注意事项**
 
@@ -1161,7 +1163,7 @@ border-style 、 border-width 、 border-color 其实也是复合属性。
 3. 块级元素、行内块元素，均可以完美地设置四个方向的 margin ；但行内元素，左右margin 可以完美设置，上下 margin 设置无效。
 4. margin 的值也可以是 auto ，如果给一个块级元素设置左右 margin 都为 auto ，该块级元素会在父元素中水平居中。
 5. margin 的值可以是负值。
-10.2 margin 塌陷问题
+   10.2 margin 塌陷问题
 
 **什么是 margin 塌陷？**
 第一个子元素的上 margin 会作用在父元素上，最后一个子元素的下 margin 会作用在父元素上。
@@ -1177,13 +1179,9 @@ border-style 、 border-width 、 border-color 其实也是复合属性。
 **如何解决 margin 塌陷？**
 无需解决，布局的时候上下的兄弟元素，只给一个设置上下外边距就可以了。
 
-
-
-
-
 ## 浮动
 
-```css	
+```css
 .class {
     float: left;
 }
@@ -1191,28 +1189,28 @@ border-style 、 border-width 、 border-color 其实也是复合属性。
 
 **浮动后元素特点：**
 
-1.  可以和其他元素共用一行
-2.  不管浮动前是什么元素，浮动后：默认宽与高都是被内容撑开的(尽可能小)，并且可以设置宽高
-3.  脱离文档流
-4.  不会margin合并，也不会margin塌陷，能欧完美设置四个方向的margin和padding
-5.  浮动后的元素不会被当作行内块的文本处理
+1. 可以和其他元素共用一行
+2. 不管浮动前是什么元素，浮动后：默认宽与高都是被内容撑开的(尽可能小)，并且可以设置宽高
+3. 脱离文档流
+4. 不会margin合并，也不会margin塌陷，能欧完美设置四个方向的margin和padding
+5. 浮动后的元素不会被当作行内块的文本处理
 
 **浮动后的影响**
 
-1.  因为脱离文档流，其父亲就会因为没有元素而撑不开，即父元素高度塌陷。
-2.  不浮动的兄弟元素的文字将会被踢出
+1. 因为脱离文档流，其父亲就会因为没有元素而撑不开，即父元素高度塌陷。
+2. 不浮动的兄弟元素的文字将会被踢出
 
 **解决方案：**
 
-1.  给父元素指定高度
-2.  给父元素也设置为浮动，会带来其他影响。
-3.  给父元素设置overflow:hidden
-4.  在所有浮动元素的最后面添加一个会计元素，并给改会计元素设置clear:both
-5.  最优解：给浮动元素的父元素设置为元素，通过为元素清楚浮动，原理与四相同：
+1. 给父元素指定高度
+2. 给父元素也设置为浮动，会带来其他影响。
+3. 给父元素设置overflow:hidden
+4. 在所有浮动元素的最后面添加一个会计元素，并给改会计元素设置clear:both
+5. 最优解：给浮动元素的父元素设置为元素，通过为元素清楚浮动，原理与四相同：
 
-```css	
+```css
 .parent::afer {
-	content:"";
+    content:"";
     display:block;
     clear:both;
 }
@@ -1220,7 +1218,7 @@ border-style 、 border-width 、 border-color 其实也是复合属性。
 
 **布局的基本原则：**
 
--   在设置浮动的时候，要么全部浮动，要么全部不浮动
+- 在设置浮动的时候，要么全部浮动，要么全部不浮动
 
 ## 定位
 
@@ -1228,7 +1226,7 @@ border-style 、 border-width 、 border-color 其实也是复合属性。
 
 相对于定位之前所在位置
 
-```css	
+```css
 position:relative;
 left:100px;
 top:100px;
@@ -1236,16 +1234,16 @@ top:100px;
 
 注意：
 
-1.  left和right不能同时存在，同理top和bottom也不能同时存在
-2.  相对定位对margin和浮动均没有影响，但是不推荐使用
+1. left和right不能同时存在，同理top和bottom也不能同时存在
+2. 相对定位对margin和浮动均没有影响，但是不推荐使用
 
 ## 绝对定位
 
 会使元素彻底脱离文档流
 
--   和浮动的区别：浮动后兄弟元素的文字会被踢出，但是绝对定位会完全覆盖
+- 和浮动的区别：浮动后兄弟元素的文字会被踢出，但是绝对定位会完全覆盖
 
-```css	
+```css
 position:absolute;
 top:10px;
 left:10px;
@@ -1253,77 +1251,77 @@ left:10px;
 
 注意：
 
-1.  对于绝对定位而言，其位置相对于包含块
-    -   什么是包含块
-        1.  没有脱离文档流的元素，父元素就是包含块
-        2.  脱离了文档流的元素，第一个开启定位的祖先元素，就是他的包含块
-2.  可以与`margin`搭配，**但是注意：**
-    1.  相对定位中有`left,top`时，只能写`margin-top/left`,不能写`right`和`bottom`,但是在某些浏览器中并不生效
-3.  不能与浮动搭配
-4.  无论是行内元素，块元素，一旦开启了绝对定位，就变成了定位元素
-    -   **什么是定位块？**宽高默认由内容撑开，也可以自己设置
+1. 对于绝对定位而言，其位置相对于包含块
+   - 什么是包含块
+     1. 没有脱离文档流的元素，父元素就是包含块
+     2. 脱离了文档流的元素，第一个开启定位的祖先元素，就是他的包含块
+2. 可以与`margin`搭配，**但是注意：**
+   1. 相对定位中有`left,top`时，只能写`margin-top/left`,不能写`right`和`bottom`,但是在某些浏览器中并不生效
+3. 不能与浮动搭配
+4. 无论是行内元素，块元素，一旦开启了绝对定位，就变成了定位元素
+   - **什么是定位块？**宽高默认由内容撑开，也可以自己设置
 
 **应用场景：**
 
-1.  一个元素盖在另一个元素上
+1. 一个元素盖在另一个元素上
 
 ### 固定定位
 
 说明：
 
-1.  脱离文档流
-2.  参照为整个浏览器窗口
-3.  无论窗口怎么变，固定定位的元素永远会一直存在于界面中，并且遮挡住其他元素 
-4.  不能和浮动同时设置，一旦同时设置，浮动实效。
-5.  固定定位的元素，也能通过margin调整位置，但不推荐
+1. 脱离文档流
+2. 参照为整个浏览器窗口
+3. 无论窗口怎么变，固定定位的元素永远会一直存在于界面中，并且遮挡住其他元素
+4. 不能和浮动同时设置，一旦同时设置，浮动实效。
+5. 固定定位的元素，也能通过margin调整位置，但不推荐
 
 ### 粘性定位
 
 **如何设置为粘性定位**
 
--   给元素设置position:sticky接口实现
--   可以使用left, right,top,bottom四个属性调整位置，最常用的是top,必须存在一个
+- 给元素设置position:sticky接口实现
+- 可以使用left, right,top,bottom四个属性调整位置，最常用的是top,必须存在一个
 
 **参考点：**
 
-1.  离他最近的一个拥有滚动机制的祖先元素，即便这个祖先不是最近的真实课滚动祖先
+1. 离他最近的一个拥有滚动机制的祖先元素，即便这个祖先不是最近的真实课滚动祖先
 
 **特点：**
 
-1.  不会脱离文档流，一种专门用于窗口滚动式新的定位方式
-2.  最常用的是top值
-3.  粘性定位和浮动可以同时设置，但不推荐
-4.  粘性定位的元素也可以通过margin调整位置，但不推荐
+1. 不会脱离文档流，一种专门用于窗口滚动式新的定位方式
+2. 最常用的是top值
+3. 粘性定位和浮动可以同时设置，但不推荐
+4. 粘性定位的元素也可以通过margin调整位置，但不推荐
 
 ### 定位的层级
 
 说明：
 
-1.  定位元素的显示层级比普通元素高，无论什么定位，显示层级都是一样的。
-2.  如果位置发生重叠，默认情况是：后面的元素，会显示在前面元素之上
-3.  可以通过CSS属性z-index调整元素的显示层级
-4.  z-index的属性值是数字，没有单位，值越大现实层级越高。
-5.  只有定位的元素设置z-index才有效
-6.  如果z-index值大的元素，依然没有覆盖掉z-index值小的元素，那么需要检查其包含块的层级。
+1. 定位元素的显示层级比普通元素高，无论什么定位，显示层级都是一样的。
+2. 如果位置发生重叠，默认情况是：后面的元素，会显示在前面元素之上
+3. 可以通过CSS属性z-index调整元素的显示层级
+4. z-index的属性值是数字，没有单位，值越大现实层级越高。
+5. 只有定位的元素设置z-index才有效
+6. 如果z-index值大的元素，依然没有覆盖掉z-index值小的元素，那么需要检查其包含块的层级。
 
 ### 定位的特殊应用
 
 **注意：**
 
-1.  发生固定定位，绝对定位后，元素都变成了定位元素，默认宽高北内容撑开，切依然可以设置宽高。
-2.  发生相对定位后，元素依然是之前的显示模式。
-3.  一下的特殊应用，只针对于绝对定位和固定定位的元素，不包括相对定位的元素
+1. 发生固定定位，绝对定位后，元素都变成了定位元素，默认宽高北内容撑开，切依然可以设置宽高。
+2. 发生相对定位后，元素依然是之前的显示模式。
+3. 一下的特殊应用，只针对于绝对定位和固定定位的元素，不包括相对定位的元素
 
 #### 让定位元素的宽高充满包含块
 
-1.  块宽想与包含块一只，可以给定位元素同时设置left和right为0
-2.  高度相遇包含块一致，top和bottom设置为0
+1. 块宽想与包含块一只，可以给定位元素同时设置left和right为0
+2. 高度相遇包含块一致，top和bottom设置为0
 
 #### 让定位元素在包含块中居中
 
--   方案一：
+- 方案一：
 
-```css	
+```css
 left:0;
 rught:0;
 top:0;
@@ -1331,9 +1329,9 @@ bottom:0;
 margin:auto;
 ```
 
--   方案二：
+- 方案二：
 
-```css	
+```css
 left:50%;
 top:50%;
 margin-left:- 宽度一半;
@@ -1342,36 +1340,327 @@ margin-top: - 高度一半;
 
 **注意：**该定位的元素必须设置宽高
 
-
-
 ## 布局
 
 ### 1. 版心
 
--   在PC端网页中，一般都会有一个固定宽度且水平居中的盒子，来显示网页的主要内容，这是网页的版心
--   版心的宽度一般是960~1200像素之间
--   版心可以是一个，也可以是多个
-
-
+- 在PC端网页中，一般都会有一个固定宽度且水平居中的盒子，来显示网页的主要内容，这是网页的版心
+- 版心的宽度一般是960~1200像素之间
+- 版心可以是一个，也可以是多个
 
 ### 2. 常见单词
 
-版心					container
+版心                    container
 
-顶部导航条				topbar
-页头					header 、 page-header
-导航					nav 、 navigator 、 navbar
-搜索框					search 、 search-box
-横幅、广告、宣传图		banner
-主要内容					content 、 main
-侧边栏						aside 、 sidebar
-页脚						footer 、 page-footer
-
-
+顶部导航条                topbar
+页头                    header 、 page-header
+导航                    nav 、 navigator 、 navbar
+搜索框                    search 、 search-box
+横幅、广告、宣传图        banner
+主要内容                    content 、 main
+侧边栏                        aside 、 sidebar
+页脚                        footer 、 page-footer
 
 ### 3.重置默认样式
 
+# CSS3
 
+## 私有前缀
+
+常见浏览器私有前缀
+
+- Chrome 浏览器： -webkit
+
+- Safari 浏览器： -webkit
+
+- Firefox 浏览器： -moz
+
+- Edge 浏览器： -webkit-
+
+- 旧 Opera 浏览器：-o-
+
+- 旧 IE 浏览器：-ms-
+
+> 说明：在编码时不需要考虑，以后可以借助构建工具来实现
+
+## 新增长度单位
+
+1. rem 根元素字体大小的倍数，只与根元素字体大小有关。
+2. vw 视口宽度的百分之多少     10vw 就是视口宽度的 10% 。
+3. vh 视口高度的百分之多少 10vh 就是视口高度的 10% 。
+4. vmax 视口宽高中大的那个的百分之多少。（了解即可）
+5. vmin 视口宽高中小的那个的百分之多少。（了解即可）
+
+## 新增颜色设置方式
+
+新增了三种设置方式：rhba,hsl,hsla
+
+## 新增选择器
+
+动态伪类，目标伪类，UI伪类，结构伪类，否定伪类，伪元素
+
+## 新增的盒子模型
+
+### box-sizing 怪异盒模型
+
+使用box-sizing可以设置和模型的两种属性
+
+| 可选值         | 含义                            |
+| ----------- | ----------------------------- |
+| Content-box | width和height设置的是盒子内容区的大小（默认值  |
+| border-box  | width和height设置的是盒子的总大小(怪异盒模型) |
+
+#### resize
+
+使用resize属性可以控制是否允许用户调节元素尺寸
+
+| 值          | 含义             |
+| ---------- | -------------- |
+| none       | 不允许用户调整元素大小    |
+| both       | 用户可以调节元素的宽度和高度 |
+| horizontal | 用户可以调节元素的宽度    |
+| vertical   | 用户可以调节元素的高度    |
+
+### box-shadow盒子阴影
+
+使用box-shadow属性为盒子添加阴影
+
+语法：
+
+> Box-shadow:h-shadow v-shadow blur spread color inset;
+
+各个值的含义：
+
+| 值        | 含义                 |
+| -------- | ------------------ |
+| h-shadow | 水平阴影的位置，必须填写，可以为负值 |
+| v-shadow | 垂直阴影的位置，必须填写，可以为负值 |
+| blur     | 可选，模糊距离            |
+| spread   | 可选阴影的外延值           |
+| color    | 可选，阴影的颜色           |
+| inset    | 可选将外部阴影改为内部阴影      |
+
+默认值：box-shadow:none代表没有阴影
+
+示例：
+
+```html
+      /* 最少写两个值：水平位置。垂直问题 */
+      /* box-shadow:  10px 10px; */
+
+      /* 写三个值：水平位置 垂直问题 阴影颜色 */
+      /* box-shadow: 10px 10px blue; */
+
+      /* 写三个值：水平位置 垂直问题 阴影的模糊程度 */
+      /* box-shadow: 10px 10px 20px; */
+      /* 写四个值：水平位置 垂直问题 阴影的模糊程度 阴影颜色*/
+      /* box-shadow: 10px 10px 20px blue; */
+      /* 写五个值：水平位置 垂直问题 阴影的模糊程度 阴影的外延 阴影颜色*/
+      /* box-shadow: 10px 10px 20px 0px blue; */
+
+      /* 写六个值：水平位置 垂直问题 阴影的模糊程度 阴影的外延 阴影颜色 内阴影*/
+      box-shadow: 10px 10px 20px 0px blue inset;
+```
+
+### background-origin背景起源
+
+作用：设置背景图的原点
+语法：
+    - padding-box:  从padding区域开始显示背景图像 ----默认值
+    - border-box:  从border区域开始显示背景图像
+    - content-box:  从content区域开始显示背景图像
+
+### background-clip背景剪切
+
+作用：设置背景图的剪切区域
+语法：
+    - border-box:从border区域开始往外裁剪背景图像 --默认值
+    - padding-box:从padding区域开始往外裁剪背景图像
+    - content-box:从content区域开始往外裁剪背景图像
+    - text：背景图只呈现在文字上，需搭配color:transparent属性才可实现
+示例：
+
+```html
+/* border以外的背景图不可见，默认值 */
+background-clip: border-box;
+
+/* padding以外的背景图不可见，背景颜色也不可见 */
+background-clip: padding-box;
+
+/* content以外的背景图和背景色都不可见 */
+background-clip: content-box;
+
+/* 配合文字透明，即可实现背景图只呈现在文字上 */
+background-clip: text;
+```
+
+### background-size背景大小
+
+作用：设置背景图的尺寸
+语法：
+
+- 用长度值指定背景图片大小，不允许负值
+- 用百分比指定背景图片大小，不允许负值
+- auto：指定背景图片真实大小 ---默认值
+- contain：将背景图片等比缩放，是背景图片的宽或高于容器的宽或高相等。再将完整背景图片包含在容器内，但是要注意：可能会造成容器里部分区域没有背景图片
+- cover：将背景图片等比缩放，知道完全覆盖容器，图片会尽可能全的显示在元素上，但是要注意：背景图片又可能显示不完整。 --相对比较好的选择
+
+示例：
+
+```html
+background-size: 200px 300px; 
+background-size: 100% 100%;
+background-size: contain;
+background-size: cover;
+```
+
+### background 复合属性
+
+语法：
+background: <color> <image> <repeat> <position> / <size> <origin> <clip>;
+说明：
+
+- `origin`和`clip`的值如果是一样的，如果只写一个值，则`origin`和`clip`都设置为此值；如果设置了两个值，则前面的事`origin`,后面的是`clip`
+- size的是必须卸载`position`值的后面，并且使用`/`分开
+
+### 多背景图
+
+```html
+background: url("../../资源文件/background/bg-lt.png") no-repeat left top,
+    url("../../资源文件/background/bg-rt.png") no-repeat right top,
+    url("../../资源文件/background/bg-lb.png") no-repeat left bottom,
+    url("../../资源文件/background/bg-rb.png") no-repeat right bottom;
+```
+
+## 新增边框相关属性
+
+### 边框圆角
+
+说明：使用border-radius属性可以设置边框圆角
+示例：
+
+```css
+/* 给四个角一样的圆角 */
+border-radius: 50px;
+border-radius: 50%;
+
+/* 给四个角分别设置圆角 */
+border-top-left-radius: 50px;
+border-top-right-radius: 50px;
+
+/* 椭圆，100为x轴方向，200是y轴方向 */
+/* 给四个角分别设置椭圆角 */
+border-top-left-radius: 100px 200px;
+border-top-right-radius: 50px 20px;
+border-bottom-right-radius: 100px 50px;
+border-bottom-left-radius: 100px 100px;
+
+/* 复合属性，分开设置每个角的圆角，几乎不用，左上x右上x右下x左下x / 左上y右上y右下y左下y */
+border-radius: 100px 50px 100px 100px / 200px 20px 50px 100px ;
+```
+
+### 边框外轮廓
+
+说明：使用outline属性可以设置边框外轮廓
+注意：
+
+- outline-offset不能写进outline中，因为outline-offset不是outline的子属性
+- outline-offset设置外轮廓于边框的距离，正负值都可以设置
+示例：
+
+```css
+outline-width: 20px;
+outline-color: blue;
+outline-style: solid;
+outline-offset: 30px;
+
+/* 复合属性，但是注意offset不能写进outline中，因为outline-offset不是outline的子属性 */
+outline: 20px solid orange;
+outline-offset: 30px;
+```
+
+## 新增文本相关属性
+
+### 文本阴影
+
+说明：使用text-shadow属性可以设置文本阴影
+
+示例：
+
+```css
+text-shadow: 3px 3px;
+text-shadow: 3px 3px red;
+text-shadow: 3px 3px 10px red ;
+text-shadow: 3px 3px 15px black;
+/* 在背景为黑色，字体颜色为白色时可以制造光晕效果 */
+text-shadow: 0px 0px 20px red;
+```
+
+### 文本换行
+
+说明：使用white-space属性可以设置文本换行
+
+示例：
+
+```css
+/* 按原文显示，与pre标签效果相同 */
+white-space: pre;
+/* 容器不够大时自动换行 */
+white-space: pre-wrap;
+/* 每句话最左侧和最右侧无效空格去掉，即只认换行 */
+white-space: pre-line;
+/* 所有均不换行 */
+white-space: nowrap;
+```
+
+说明：normal为默认值，文本超出边界自动换行，文本中的换行被浏览器识别为一个空格
+
+### 文本溢出
+
+说明：使用`text-overflow`属性可以设置文本溢出效果
+
+常用值：
+
+- `clip`：当内联内容溢出时，将溢出部分剪切掉(默认值)
+- `ellipsis`：将溢出部分替换为...
+
+**注意：** 此属性必须搭配`white-space`显式定义为非`visible`和`overflow`为`nowrap`属性使用
+示例：
+
+```css
+white-space: nowrap;
+overflow: hidden;
+
+text-overflow: clip;
+
+text-overflow: ellipsis;
+```
+
+### 文本修饰
+
+说明：使用text-decoration属性可以设置文本修饰
+
+```css
+text-decoration-line: overline;
+text-decoration-style: dashed;
+text-decoration-color: blue;
+/* 复合属性 */
+text-decoration: overline dashed blue;
+```
+
+### 文本描边
+
+注意：只有webkit内核的浏览器才支持
+
+```css
+/* 文本描边颜色 */
+-webkit-text-stroke-color: red;
+/* 文本描边宽度 */
+-webkit-text-stroke-width: 3px;
+
+/* 复合属性 */
+-webkit-text-stroke: 3px red;
+```
 
 [image-1]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/A3t2Br.png
 [image-2]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/B0IC8m.png
