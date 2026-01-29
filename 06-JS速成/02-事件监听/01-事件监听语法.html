@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>事件监听</title>
+    </head>
+    <body>
+        <input type="button" id="btn1" value="try" />
+        <input type="button" id="btn2" value="try2" />
+
+        <script>
+            document.querySelector("#btn1").addEventListener("click", () => {
+              alert('this is button1');
+            });
+            document.querySelector("#btn1").addEventListener("click", () => {
+              alert('this is button1 twice');
+            });
+            //早期实现
+            document.querySelector('#btn2').onclick = function () {
+              console.log('this is button2')
+            };
+            document.querySelector('#btn2').onclick = function () {
+              console.log('this is button2 twice')
+            };
+        </script>
+    </body>
+</html>
