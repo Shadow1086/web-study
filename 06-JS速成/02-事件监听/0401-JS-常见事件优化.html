@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>常见事件的优化</title>
+        <style>
+            .container {
+                width: 960px;
+                margin: 0 auto;
+            }
+            .func {
+                width: 600px;
+                margin: 0 auto;
+            }
+            table {
+                margin-top: 10px;
+                border-collapse: collapse;
+            }
+            table td,
+            tr {
+                width: 300px;
+                height: 40px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="func">
+                <form action="#" method="#">
+                    姓名：<input type="text" id="text1" /> 分数：<input
+                        type="text"
+                        id="text2"
+                    />
+                </form>
+                <button type="button" id="btn1">提交</button>
+                <button type="button" id="btn2">单击事件</button>
+            </div>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>分数</th>
+                        <th>评语</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>张三</td>
+                        <td>85</td>
+                        <td>良好</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>李四</td>
+                        <td>92</td>
+                        <td>优秀</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>王五</td>
+                        <td>78</td>
+                        <td>中等</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- type="module"代表使用模块化的JS -->
+        <script src="./0402-常见事件优化.js" type="module"></script>
+    </body>
+</html>
