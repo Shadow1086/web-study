@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>员工列表</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                /* table-layout: auto; */
+                margin: 0 auto;
+            }
+            tr {
+              height: 40px;
+              text-align: center;
+            }
+            th,td {
+              width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>职位</th>
+                    <th>入职日期</th>
+                    <th>最后操作时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>张三</td>
+                    <td>男</td>
+                    <td>讲师</td>
+                    <td>2024-01-15</td>
+                    <td>2024-01-28</td>
+                    <td><button>删除</button></td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>女</td>
+                    <td>前端工程师</td>
+                    <td>2023-06-20</td>
+                    <td>2024-01-27</td>
+                    <td><button>删除</button></td>
+                </tr>
+                <tr>
+                    <td>王五</td>
+                    <td>男</td>
+                    <td>UI设计师</td>
+                    <td>2023-09-10</td>
+                    <td>2024-01-28</td>
+                    <td><button>删除</button></td>
+                </tr>
+                <tr>
+                    <td>赵六</td>
+                    <td>女</td>
+                    <td>后端工程师</td>
+                    <td>2024-02-01</td>
+                    <td>2024-01-28</td>
+                    <td><button>删除</button></td>
+                </tr>
+                <tr>
+                    <td>孙七</td>
+                    <td>男</td>
+                    <td>产品经理</td>
+                    <td>2023-11-05</td>
+                    <td>2024-01-26</td>
+                    <td><button>删除</button></td>
+                </tr>
+                <tr>
+                    <td>周八</td>
+                    <td>女</td>
+                    <td>测试工程师</td>
+                    <td>2023-08-15</td>
+                    <td>2024-01-28</td>
+                    <td><button>删除</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+            //先获取所有tr标签对应的dom元素
+            let trs = document.querySelectorAll("tr");
+            //2. 为每一个tr标签添加事件监听
+            for (let i = 0; i < trs.length; i++) {
+                trs[i].addEventListener("mouseenter", function () {
+                    this.style.backgroundColor = "#f2e2e2";
+                });
+                trs[i].addEventListener("mouseleave", function () {
+                    this.style.backgroundColor = "#fff";
+                });
+            }
+        </script>
+    </body>
+</html>
