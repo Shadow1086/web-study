@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>主轴对齐方式</title>
+        <style>
+            .outer {
+                width: 1000px;
+                height: 600px;
+                background-color: #888;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                /* 主轴对齐方式,主轴的起始位置，flex-start为默认值 */
+                justify-content: flex-start;
+
+                justify-content: flex-end;
+                /* 中间对齐 */
+                justify-content: center;
+                /* 项目均匀的分布在一行中，项目与项目之间的距离是项目距离边缘的二倍 */
+                justify-content: space-around;
+                /* 项目均匀分布一行中，项目距离边缘没有距离 */
+                justify-content: space-between;
+                /* 项目均匀分布在一行中，各个距离都相等 */
+                justify-content: space-evenly;
+            }
+            .inner {
+                width: 200px;
+                height: 200px;
+                background-color: skyblue;
+                border: 1px solid black;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <div class="inner">1</div>
+            <div class="inner">2</div>
+            <div class="inner">3</div>
+        </div>
+    </body>
+</html>

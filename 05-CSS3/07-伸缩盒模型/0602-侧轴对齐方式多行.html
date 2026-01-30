@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>侧轴对齐方式-多行</title>
+        <style>
+            .outer {
+                width: 1000px;
+                height: 900px;
+                background-color: #888;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                
+            }
+            .inner {
+                width: 200px;
+                height: 200px;
+                background-color: skyblue;
+                border: 1px solid black;
+                box-sizing: border-box;
+            }
+            .inner2 {
+              height: 300px;
+              font-size: 80px;
+            }
+            .inner3 {
+              height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <div class="inner">1</div>
+            <div class="inner inner2">2</div>
+            <div class="inner inner3">3</div>
+        </div>
+    </body>
+</html>

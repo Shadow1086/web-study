@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>侧轴对齐方式</title>
+        <style>
+            .outer {
+                width: 1000px;
+                height: 600px;
+                background-color: #888;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                /* 侧轴的对齐方式 侧轴的起始位置对齐*/
+                align-items: flex-start;
+                /* 侧轴的结束为止对齐 */
+                align-items: flex-end; 
+                /* 侧轴的中间位置对齐 */
+                align-items: center;
+                /* 文字基线位置对齐 */
+                align-items: baseline;
+                /* 拉伸到整个父容器（伸缩的项目不能给高度)，默认值 */
+                align-items: stretch;
+            }
+            .inner {
+                width: 200px;
+                height: 200px;
+                background-color: skyblue;
+                border: 1px solid black;
+                box-sizing: border-box;
+            }
+            .inner2 {
+              height: 300px;
+              font-size: 80px;
+            }
+            .inner3 {
+              height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <div class="inner">1</div>
+            <div class="inner inner2">2</div>
+            <div class="inner inner3">3</div>
+        </div>
+    </body>
+</html>
