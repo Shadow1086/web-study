@@ -2220,6 +2220,24 @@ align-content:stretch
    项目二需要收缩： 比例值2 × 300
    项目三需要收缩： 比例值3 × 300
 
+#### flex复合属性
+
+flex 是复合属性，复合了： flex-grow 、 flex-shrink 、 flex-basis 三个属性，默认值为 0 1 auto 。
+
+- 如果写 flex:1 1 auto ，则可简写为： flex:auto
+- 如果写 flex:1 1 0 ，则可简写为： flex:1
+- 如果写 flex:0 0 auto ，则可简写为： flex:none
+- 如果写 flex:0 1 auto ，则可简写为： flex:0 auto —— 即 flex 初始值。
+
+#### 项目排序
+
+order 属性定义项目的排列顺序。数值越小，排列越靠前，默认为 0 。可以为负数
+
+#### 单独对齐
+
+- 通过 align-self 属性，可以单独调整某个伸缩项目的对齐方式
+- 默认值为 auto ，表示继承父元素的 align-items 属性。
+
 [image-1]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/A3t2Br.png
 
 [image-2]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/B0IC8m.png
