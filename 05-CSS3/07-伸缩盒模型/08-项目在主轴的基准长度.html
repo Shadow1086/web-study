@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<title>侧轴对齐方式-多行</title>
+	<style>
+        .outer {
+            width: 650px;
+            height: 550px;
+            background-color: #888;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .inner {
+            width: 150px;
+            height: 150px;
+            background-color: skyblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        .inner2 {
+            /*  设置伸缩项目在主轴上的基准长度，若主轴是横向的，宽失效，若主轴是纵向的，高失效*/
+            flex-basis: 300px;
+        }
+	</style>
+</head>
+<body>
+<div class="outer">
+	<div class="inner">1</div>
+	<div class="inner inner2">2</div>
+	<div class="inner">3</div>
+</div>
+</body>
+</html>
