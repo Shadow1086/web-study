@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+        h1 {
+            width: 600px;
+            height: 400px;
+            background-image: linear-gradient(30deg, red, yellow, green);
+            margin: 0 auto;
+            text-align: center;
+            font-size: 100px;
+            color: white;
+            text-shadow: 0 0 10px black;
+        }
+
+        /*只有在打印机/打印预览才应用的样式*/
+        @media print {
+            h1 {
+                background: transparent;
+            }
+        }
+
+        /* 只有在屏幕上才应用的样式 */
+        @media screen {
+            h1 {
+                font-family: "翩翩体-简", serif;
+            }
+        }
+
+        @media all {
+            h1 {
+                color: red;
+            }
+        }
+	</style>
+</head>
+<body>
+<h1>新年快乐</h1>
+</body>
+</html>

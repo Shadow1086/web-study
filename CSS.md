@@ -1451,98 +1451,95 @@ margin-top: -高度一半
 
 ### 20.1 私有前缀
 
-常见浏览器私有前缀
+**常见浏览器私有前缀：**
 
-- Chrome 浏览器： -webkit
+- Chrome 浏览器：`-webkit`
+- Safari 浏览器：`-webkit`
+- Firefox 浏览器：`-moz`
+- Edge 浏览器：`-webkit-`
+- 旧 Opera 浏览器：`-o-`
+- 旧 IE 浏览器：`-ms-`
 
-- Safari 浏览器： -webkit
-
-- Firefox 浏览器： -moz
-
-- Edge 浏览器： -webkit-
-
-- 旧 Opera 浏览器：-o-
-
-- 旧 IE 浏览器：-ms-
-
-> 说明：在编码时不需要考虑，以后可以借助构建工具来实现
+> **说明：** 在编码时不需要考虑，以后可以借助构建工具来实现。
 
 ### 20.2 新增长度单位
 
-1. rem 根元素字体大小的倍数，只与根元素字体大小有关。
-2. vw 视口宽度的百分之多少 10vw 就是视口宽度的 10% 。
-3. vh 视口高度的百分之多少 10vh 就是视口高度的 10% 。
-4. vmax 视口宽高中大的那个的百分之多少。（了解即可）
-5. vmin 视口宽高中小的那个的百分之多少。（了解即可）
+1. `rem` 根元素字体大小的倍数，只与根元素字体大小有关。
+2. `vw` 视口宽度的百分之多少，`10vw` 就是视口宽度的 `10%`。
+3. `vh` 视口高度的百分之多少，`10vh` 就是视口高度的 `10%`。
+4. `vmax` 视口宽高中大的那个的百分之多少。（了解即可）
+5. `vmin` 视口宽高中小的那个的百分之多少。（了解即可）
 
 ### 20.3 新增颜色设置方式
 
-新增了三种设置方式：rhba,hsl,hsla
+新增了三种设置方式：`rhba`、`hsl`、`hsla`
 
 ### 20.4 新增选择器
 
-动态伪类，目标伪类，UI伪类，结构伪类，否定伪类，伪元素
+动态伪类，目标伪类，UI 伪类，结构伪类，否定伪类，伪元素
 
 ### 20.5 新增的盒子模型
 
-#### 20.5.1 box-sizing 怪异盒模型
+#### 20.5.1 `box-sizing` 怪异盒模型
 
-使用box-sizing可以设置和模型的两种属性
+使用 `box-sizing` 可以设置和模型的两种属性。
 
-| 可选值         | 含义                            |
-|-------------|-------------------------------|
-| Content-box | width和height设置的是盒子内容区的大小（默认值  |
-| border-box  | width和height设置的是盒子的总大小(怪异盒模型) |
+| 可选值           | 含义                                   |
+|---------------|--------------------------------------|
+| `Content-box` | `width` 和 `height` 设置的是盒子内容区的大小（默认值  |
+| `border-box`  | `width` 和 `height` 设置的是盒子的总大小(怪异盒模型) |
 
-##### 20.5.1.1 resize
+##### 20.5.1.1 `resize`
 
-使用resize属性可以控制是否允许用户调节元素尺寸
+使用 `resize` 属性可以控制是否允许用户调节元素尺寸。
 
-| 值          | 含义             |
-|------------|----------------|
-| none       | 不允许用户调整元素大小    |
-| both       | 用户可以调节元素的宽度和高度 |
-| horizontal | 用户可以调节元素的宽度    |
-| vertical   | 用户可以调节元素的高度    |
+| 值            | 含义             |
+|--------------|----------------|
+| `none`       | 不允许用户调整元素大小    |
+| `both`       | 用户可以调节元素的宽度和高度 |
+| `horizontal` | 用户可以调节元素的宽度    |
+| `vertical`   | 用户可以调节元素的高度    |
 
-#### 20.5.2 box-shadow 盒子阴影
+#### 20.5.2 `box-shadow` 盒子阴影
 
-使用box-shadow属性为盒子添加阴影
+使用 `box-shadow` 属性为盒子添加阴影。
 
-语法：
+**语法：**
 
-> Box-shadow:h-shadow v-shadow blur spread color inset;
+> `Box-shadow:h-shadow v-shadow blur spread color inset;`
 
-各个值的含义：
+**各个值的含义：**
 
-| 值        | 含义                 |
-|----------|--------------------|
-| h-shadow | 水平阴影的位置，必须填写，可以为负值 |
-| v-shadow | 垂直阴影的位置，必须填写，可以为负值 |
-| blur     | 可选，模糊距离            |
-| spread   | 可选阴影的外延值           |
-| color    | 可选，阴影的颜色           |
-| inset    | 可选将外部阴影改为内部阴影      |
+| 值          | 含义                 |
+|------------|--------------------|
+| `h-shadow` | 水平阴影的位置，必须填写，可以为负值 |
+| `v-shadow` | 垂直阴影的位置，必须填写，可以为负值 |
+| `blur`     | 可选，模糊距离            |
+| `spread`   | 可选阴影的外延值           |
+| `color`    | 可选，阴影的颜色           |
+| `inset`    | 可选将外部阴影改为内部阴影      |
 
-默认值：box-shadow:none代表没有阴影
+**默认值：** `box-shadow:none` 代表没有阴影。
 
-示例：
+**示例：**
 
 ```css
 /* 最少写两个值：水平位置。垂直问题 */
-/* box-shadow:  10px 10px; */
+/* box-shadow: 10px 10px; */
 
 /* 写三个值：水平位置 垂直问题 阴影颜色 */
 /* box-shadow: 10px 10px blue; */
 
 /* 写三个值：水平位置 垂直问题 阴影的模糊程度 */
 /* box-shadow: 10px 10px 20px; */
-/* 写四个值：水平位置 垂直问题 阴影的模糊程度 阴影颜色*/
+
+/* 写四个值：水平位置 垂直问题 阴影的模糊程度 阴影颜色 */
 /* box-shadow: 10px 10px 20px blue; */
-/* 写五个值：水平位置 垂直问题 阴影的模糊程度 阴影的外延 阴影颜色*/
+
+/* 写五个值：水平位置 垂直问题 阴影的模糊程度 阴影的外延 阴影颜色 */
 /* box-shadow: 10px 10px 20px 0px blue; */
 
-/* 写六个值：水平位置 垂直问题 阴影的模糊程度 阴影的外延 阴影颜色 内阴影*/
+/* 写六个值：水平位置 垂直问题 阴影的模糊程度 阴影的外延 阴影颜色 内阴影 */
 box-shadow:
 
 10
@@ -1560,25 +1557,28 @@ px blue inset
 ;
 ```
 
-#### 20.5.3 background-origin 背景起源
+#### 20.5.3 `background-origin` 背景起源
 
-作用：设置背景图的原点
-语法：
+**作用：** 设置背景图的原点。
 
-- padding-box:  从padding区域开始显示背景图像 ----默认值
-- border-box:  从border区域开始显示背景图像
-- content-box:  从content区域开始显示背景图像
+**语法：**
 
-#### 20.5.4 background-clip 背景剪切
+- `padding-box`：从 `padding` 区域开始显示背景图像 ----默认值
+- `border-box`：从 `border` 区域开始显示背景图像
+- `content-box`：从 `content` 区域开始显示背景图像
 
-作用：设置背景图的剪切区域
-语法：
+#### 20.5.4 `background-clip` 背景剪切
 
-- border-box:从border区域开始往外裁剪背景图像 --默认值
-- padding-box:从padding区域开始往外裁剪背景图像
-- content-box:从content区域开始往外裁剪背景图像
-- text：背景图只呈现在文字上，需搭配color:transparent属性才可实现
-  示例：
+**作用：** 设置背景图的剪切区域。
+
+**语法：**
+
+- `border-box`：从 `border` 区域开始往外裁剪背景图像 --默认值
+- `padding-box`：从 `padding` 区域开始往外裁剪背景图像
+- `content-box`：从 `content` 区域开始往外裁剪背景图像
+- `text`：背景图只呈现在文字上，需搭配 `color:transparent` 属性才可实现
+
+**示例：**
 
 ```css
 /* border以外的背景图不可见，默认值 */
@@ -1602,18 +1602,20 @@ background-clip: text
 ;
 ```
 
-#### 20.5.5 background-size 背景大小
+#### 20.5.5 `background-size` 背景大小
 
-作用：设置背景图的尺寸
-语法：
+**作用：** 设置背景图的尺寸。
+
+**语法：**
 
 - 用长度值指定背景图片大小，不允许负值
 - 用百分比指定背景图片大小，不允许负值
-- auto：指定背景图片真实大小 ---默认值
-- contain：将背景图片等比缩放，是背景图片的宽或高于容器的宽或高相等。再将完整背景图片包含在容器内，但是要注意：可能会造成容器里部分区域没有背景图片
-- cover：将背景图片等比缩放，知道完全覆盖容器，图片会尽可能全的显示在元素上，但是要注意：背景图片又可能显示不完整。 --相对比较好的选择
+- `auto`：指定背景图片真实大小 ---默认值
+- `contain`：将背景图片等比缩放，是背景图片的宽或高于容器的宽或高相等。再将完整背景图片包含在容器内，但是要注意：可能会造成容器里部分区域没有背景图片
+- `cover`：将背景图片等比缩放，知道完全覆盖容器，图片会尽可能全的显示在元素上，但是要注意：背景图片又可能显示不完整。
+  --相对比较好的选择
 
-示例：
+**示例：**
 
 ```css
 background-size:
@@ -1640,40 +1642,42 @@ background-size: cover
 ;
 ```
 
-#### 20.5.6 background 复合属性
+#### 20.5.6 `background` 复合属性
 
-语法：
-background: <color> <image> <repeat> <position> / <size> <origin> <clip>;
-说明：
+**语法：**
 
-- `origin`和`clip`的值如果是一样的，如果只写一个值，则`origin`和`clip`都设置为此值；如果设置了两个值，则前面的事`origin`
-  ,后面的是`clip`
-- size的是必须卸载`position`值的后面，并且使用`/`分开
+`background: <color> <image> <repeat> <position> / <size> <origin> <clip>;`
+
+**说明：**
+
+- `origin` 和 `clip` 的值如果是一样的，如果只写一个值，则 `origin` 和 `clip` 都设置为此值；如果设置了两个值，则前面的事
+  `origin`，后面的是 `clip`
+- `size` 的是必须卸载 `position` 值的后面，并且使用 `/` 分开
 
 #### 20.5.7 多背景图
 
 ```css
 background:
-url
 
+url
 (
 "../../资源文件/background/bg-lt.png"
 )
 no-repeat left top,
-url
 
+url
 (
 "../../资源文件/background/bg-rt.png"
 )
 no-repeat right top,
-url
 
+url
 (
 "../../资源文件/background/bg-lb.png"
 )
 no-repeat left bottom,
-url
 
+url
 (
 "../../资源文件/background/bg-rb.png"
 )
@@ -1686,8 +1690,9 @@ no-repeat right bottom
 
 #### 20.6.1 边框圆角
 
-说明：使用border-radius属性可以设置边框圆角
-示例：
+**说明：** 使用 `border-radius` 属性可以设置边框圆角。
+
+**示例：**
 
 ```css
 /* 给四个角一样的圆角 */
@@ -1789,12 +1794,14 @@ px
 
 #### 20.6.2 边框外轮廓
 
-说明：使用outline属性可以设置边框外轮廓
-注意：
+**说明：** 使用 `outline` 属性可以设置边框外轮廓。
 
-- outline-offset不能写进outline中，因为outline-offset不是outline的子属性
-- outline-offset设置外轮廓于边框的距离，正负值都可以设置
-  示例：
+**注意：**
+
+- `outline-offset` 不能写进 `outline` 中，因为 `outline-offset` 不是 `outline` 的子属性
+- `outline-offset` 设置外轮廓于边框的距离，正负值都可以设置
+
+**示例：**
 
 ```css
 outline-width:
@@ -1835,9 +1842,9 @@ px
 
 #### 20.7.1 文本阴影
 
-说明：使用text-shadow属性可以设置文本阴影
+**说明：** 使用 `text-shadow` 属性可以设置文本阴影。
 
-示例：
+**示例：**
 
 ```css
 text-shadow:
@@ -1882,6 +1889,7 @@ px
 px black
 
 ;
+
 /* 在背景为黑色，字体颜色为白色时可以制造光晕效果 */
 text-shadow:
 
@@ -1895,42 +1903,46 @@ px red
 
 #### 20.7.2 文本换行
 
-说明：使用white-space属性可以设置文本换行
+**说明：** 使用 `white-space` 属性可以设置文本换行。
 
-示例：
+**示例：**
 
 ```css
 /* 按原文显示，与pre标签效果相同 */
 white-space: pre
 
 ;
+
 /* 容器不够大时自动换行 */
 white-space: pre-wrap
 
 ;
+
 /* 每句话最左侧和最右侧无效空格去掉，即只认换行 */
 white-space: pre-line
 
 ;
+
 /* 所有均不换行 */
 white-space: nowrap
 
 ;
 ```
 
-说明：normal为默认值，文本超出边界自动换行，文本中的换行被浏览器识别为一个空格
+**说明：** `normal` 为默认值，文本超出边界自动换行，文本中的换行被浏览器识别为一个空格。
 
 #### 20.7.3 文本溢出
 
-说明：使用`text-overflow`属性可以设置文本溢出效果
+**说明：** 使用 `text-overflow` 属性可以设置文本溢出效果。
 
-常用值：
+**常用值：**
 
 - `clip`：当内联内容溢出时，将溢出部分剪切掉(默认值)
 - `ellipsis`：将溢出部分替换为...
 
-**注意：** 此属性必须搭配`white-space`显式定义为非`visible`和`overflow`为`nowrap`属性使用
-示例：
+**注意：** 此属性必须搭配 `white-space` 显式定义为非 `visible` 和 `overflow` 为 `nowrap` 属性使用。
+
+**示例：**
 
 ```css
 white-space: nowrap
@@ -1949,7 +1961,7 @@ text-overflow: ellipsis
 
 #### 20.7.4 文本修饰
 
-说明：使用text-decoration属性可以设置文本修饰
+**说明：** 使用 `text-decoration` 属性可以设置文本修饰。
 
 ```css
 text-decoration-line: overline
@@ -1961,6 +1973,7 @@ text-decoration-style: dashed
 text-decoration-color: blue
 
 ;
+
 /* 复合属性 */
 text-decoration: overline dashed blue
 
@@ -1969,13 +1982,14 @@ text-decoration: overline dashed blue
 
 #### 20.7.5 文本描边
 
-注意：只有webkit内核的浏览器才支持
+**注意：** 只有 `webkit` 内核的浏览器才支持。
 
 ```css
 /* 文本描边颜色 */
 -webkit-text-stroke-color: red
 
 ;
+
 /* 文本描边宽度 */
 -webkit-text-stroke-width:
 
@@ -1995,9 +2009,9 @@ px red
 
 ### 20.8 多列布局
 
-说明：使用column-count属性可以设置多列布局
+**说明：** 使用 `column-count` 属性可以设置多列布局。
 
-示例：
+**示例：**
 
 ```css
 /* 直接指定列数 */
@@ -2005,8 +2019,10 @@ column-count:
 
 3
 ;
+
 /* 指定每一列的宽度，会自动计算列数 */
 /* column-width: 250px; */
+
 /* 符合属性，能同时指定列宽和列数（不推荐使用 */
 /* columns:3 220px; */
 
@@ -2028,61 +2044,63 @@ px solid red
 column-span: all
 
 ;
-
 ```
 
 ### 20.9 伸缩盒模型
 
 #### 20.9.1 伸缩容器，伸缩项目
 
-- 伸缩容器：开启了flex的元素
-    - 给元素设置`display: flex;`或者`display: inline-flex;`，该元素就变为了伸缩容器
-    - `display: inline-flex;`很少用，因为可以给多个伸缩容器的父容器，也设置为伸缩容器
-    - 一个元素可以同时是：伸缩容器，伸缩项目
+**伸缩容器：** 开启了 `flex` 的元素
 
-- 伸缩项目：伸缩容器的所有子元素自动变成了伸缩项目
-    - 进伸缩蓉区的字元素称为伸缩项目，孙子元素等后代，不是伸缩项目
-    - 无论原来是那种元素(块，行内块，行内)，一旦称为伸缩项目，全部都会块状化
+- 给元素设置 `display: flex;` 或者 `display: inline-flex;`，该元素就变为了伸缩容器
+- `display: inline-flex;` 很少用，因为可以给多个伸缩容器的父容器，也设置为伸缩容器
+- 一个元素可以同时是：伸缩容器，伸缩项目
+
+**伸缩项目：** 伸缩容器的所有子元素自动变成了伸缩项目
+
+- 进伸缩蓉区的字元素称为伸缩项目，孙子元素等后代，不是伸缩项目
+- 无论原来是那种元素(块，行内块，行内)，一旦称为伸缩项目，全部都会块状化
 
 #### 20.9.2 主轴和侧轴
 
-- 主轴：伸缩项目沿着主轴排列，主轴默认是水平的，从左到右
-- 侧轴：与主轴垂直的轴，默认从上到下
+- **主轴：** 伸缩项目沿着主轴排列，主轴默认是水平的，从左到右
+- **侧轴：** 与主轴垂直的轴，默认从上到下
 
 #### 20.9.3 主轴的方向
 
-- 属性名：flex-direction
-- 常用值：
-    1. row：默认值，水平从左到右
-    2. row-reverse：水平从右到左
-    3. column：垂直从上到下
-    4. column-reverse：垂直从下到上
+- **属性名：** `flex-direction`
+- **常用值：**
+    1. `row`：默认值，水平从左到右
+    2. `row-reverse`：水平从右到左
+    3. `column`：垂直从上到下
+    4. `column-reverse`：垂直从下到上
 
 改变了主轴的方向，侧轴也随之改变，但是即便称为了水平方向，也是从左到右
 
 #### 20.9.4 主轴换行方式
 
-- 属性名：flex-wrap
-- 常用值：
-    1. nowrap：默认值，不换行
-    2. wrap：换行，第一行在上
-    3. wrap-reverse：换行，第一行在下
+- **属性名：** `flex-wrap`
+- **常用值：**
+    1. `nowrap`：默认值，不换行
+    2. `wrap`：换行，第一行在上
+    3. `wrap-reverse`：换行，第一行在下
 
-#### 20.9.5 flex-flow
+#### 20.9.5 `flex-flow`
 
-复合属性：flex-flow，是flex-direction和flex-wrap的复合属性，可以同时设置主轴方向和换行方式
+复合属性：`flex-flow`，是 `flex-direction` 和 `flex-wrap` 的复合属性，可以同时设置主轴方向和换行方式
 
 #### 20.9.6 主轴的对齐方式
 
-- 属性名：justify-content
-- 常用值：
-    1. flex-start：默认值，项目从主轴起点开始排列
-    2. flex-end：项目从主轴终点开始排列
-    3. center：项目从主轴中心开始排列
-    4. space-between：项目从主轴两端开始排列，项目之间的间隔相等
-    5. space-around：项目从主轴周围开始排列，项目之间的间隔相等，项目与容器边缘的间隔是项目之间间隔的一半
-    6. space-evenly：项目从主轴两端开始排列，项目之间的间隔相等，项目与容器边缘的间隔相等
-       示例：
+- **属性名：** `justify-content`
+- **常用值：**
+    1. `flex-start`：默认值，项目从主轴起点开始排列
+    2. `flex-end`：项目从主轴终点开始排列
+    3. `center`：项目从主轴中心开始排列
+    4. `space-between`：项目从主轴两端开始排列，项目之间的间隔相等
+    5. `space-around`：项目从主轴周围开始排列，项目之间的间隔相等，项目与容器边缘的间隔是项目之间间隔的一半
+    6. `space-evenly`：项目从主轴两端开始排列，项目之间的间隔相等，项目与容器边缘的间隔相等
+
+**示例：**
 
 ```css
 /* 主轴对齐方式,主轴的起始位置，flex-start为默认值 */
@@ -2093,18 +2111,22 @@ justify-content: flex-start
 justify-content: flex-end
 
 ;
+
 /* 中间对齐 */
 justify-content: center
 
 ;
+
 /* 项目均匀的分布在一行中，项目与项目之间的距离是项目距离边缘的二倍 */
 justify-content: space-around
 
 ;
+
 /* 项目均匀分布一行中，项目距离边缘没有距离 */
 justify-content: space-between
 
 ;
+
 /* 项目均匀分布在一行中，各个距离都相等 */
 justify-content: space-evenly
 
@@ -2115,139 +2137,154 @@ justify-content: space-evenly
 
 ##### 20.9.7.1 只有一行的情况
 
-- 属性名：align-items
-- 常用值：
-    1. flex-start：默认值，项目从侧轴起点开始排列
-    2. flex-end：项目从侧轴终点开始排列
-    3. center：项目从侧轴中心开始排列
-    4. baseline：项目从侧轴中文字基线开始排列
-    5. stretch：拉伸到整个父容器（前提：伸缩的项目不能给高度），默认值
+- **属性名：** `align-items`
+- **常用值：**
+    1. `flex-start`：默认值，项目从侧轴起点开始排列
+    2. `flex-end`：项目从侧轴终点开始排列
+    3. `center`：项目从侧轴中心开始排列
+    4. `baseline`：项目从侧轴中文字基线开始排列
+    5. `stretch`：拉伸到整个父容器（前提：伸缩的项目不能给高度），默认值
 
-示例：
+**示例：**
 
 ```css
-/* 侧轴的对齐方式 侧轴的起始位置对齐*/
+/* 侧轴的对齐方式 侧轴的起始位置对齐 */
 align-items: flex-start
 
 ;
+
 /* 侧轴的结束为止对齐 */
 align-items: flex-end
 
 ;
+
 /* 侧轴的中间位置对齐 */
 align-items: center
 
 ;
+
 /* 文字基线位置对齐 */
 align-items: baseline
 
 ;
+
 /* 拉伸到整个父容器（伸缩的项目不能给高度)，默认值 */
 align-items: stretch
 
 ;
 ```
 
-#### 侧轴的对齐方式 - 多行
+##### 20.9.7.2 侧轴的对齐方式 - 多行
 
-- 属性：align-content
-- 可选值：和主轴对齐的方式相同
-    - stretch ：拉伸(前提：所有项目的高度都不要定义)
+- **属性：** `align-content`
+- **可选值：** 和主轴对齐的方式相同
+- `stretch`：拉伸(前提：所有项目的高度都不要定义)
 
-示例：
+**示例：**
 
 ```css
-/*    侧轴的对齐方式：多行    */
-/*  从侧轴的起始位置开始  */
+/* 侧轴的对齐方式：多行 */
+/* 从侧轴的起始位置开始 */
 align-content: flex-start
 
 ;
-/*  侧轴的结束位置对齐   */
+
+/* 侧轴的结束位置对齐 */
 align-content: flex-end
 
 ;
-/*  侧轴的中间位置对齐   */
+
+/* 侧轴的中间位置对齐 */
 align-content: center
 
 ;
-/*  伸缩项目之间的距离是相等的，且是边缘距离的2倍 */
+
+/* 伸缩项目之间的距离是相等的，且是边缘距离的2倍 */
 align-content: space-around
 
 ;
-/*  伸缩项目之间的距离是相等的，并且边缘无距离   */
+
+/* 伸缩项目之间的距离是相等的，并且边缘无距离 */
 align-content: space-between
 
 ;
-/*  伸缩项目之间，以及和边缘的距离都是相等的    */
+
+/* 伸缩项目之间，以及和边缘的距离都是相等的 */
 align-content: space-evenly
 
 ;
-/*  拉伸，默认值，注意想要这个属性生效伸缩项目不能设置固定的高度  */
-align-content:stretch
+
+/* 拉伸，默认值，注意想要这个属性生效伸缩项目不能设置固定的高度 */
+align-content: stretch
 
 ;
 ```
 
-#### flex-basis 基准长度
+#### 20.9.8 `flex-basis` 基准长度
 
-- 概念：flex-basis设置的是主轴方向的基准长度，会让高度或者宽度失效
-- 作用：浏览器会根据这个属性设置的值，计算主轴上是否还有多余空间，默认值auto,继：伸缩项目的宽或高
+- **概念：** `flex-basis` 设置的是主轴方向的基准长度，会让高度或者宽度失效
+- **作用：** 浏览器会根据这个属性设置的值，计算主轴上是否还有多余空间，默认值 `auto`,继：伸缩项目的宽或高
 
-#### 伸缩
+#### 20.9.9 伸缩
 
-##### 伸 - flex-grow
+##### 20.9.9.1 伸 - `flex-grow`
 
-- 概念： flex-grow 定义伸缩项目的放大比例，默认为 0 ，即：纵使主轴存在剩余空间，也不拉伸（放大）。
-- 规则：
+- **概念：** `flex-grow` 定义伸缩项目的放大比例，默认为 `0`，即：纵使主轴存在剩余空间，也不拉伸（放大）。
+- **规则：**
+    1. 若所有伸缩项目的 `flex-grow` 值都为 `1`，则：它们将等分剩余空间（如果有空间的话）。
+    2. 若三个伸缩项目的 `flex-grow` 值分别为：`1`、`2`、`3`，则：分别瓜分到：`1/6`、`2/6`、`3/6` 的空间。
 
-    1. 若所有伸缩项目的 flex-grow 值都为 1 ，则：它们将等分剩余空间（如果有空间的话）。
-    2. 若三个伸缩项目的 flex-grow 值分别为： 1 、 2 、 3 ，则：分别瓜分到： 1/6 、 2/6 、3/6 的空间。
+##### 20.9.9.2 缩 - `flex-shrink`
 
-#### 缩 - flex-shrink
+- **概念：** `flex-shrink` 定义了项目的压缩比例，默认为 `1`，即：如果空间不足，该项目将会缩小。
+- **例如：**
+  三个收缩项目，宽度分别为：`200px`、`300px`、`200px`，它们的 `flex-shrink` 值分别为：`1`、`2`、`3`
+  若想刚好容纳下三个项目，需要总宽度为 `700px`，但目前容器只有 `400px`，还差 `300px` 所以每个人都要收缩一下才可以放下，具体收缩的值，这样计算：
 
-- 概念： flex-shrink 定义了项目的压缩比例，默认为 1 ，即：如果空间不足，该项目将会缩小。
-- 例如：
-  三个收缩项目，宽度分别为： 200px 、 300px 、 200px ，它们的 flex-shrink 值分别为： 1 、 2 、 3
-  若想刚好容纳下三个项目，需要总宽度为 700px ，但目前容器只有 400px ，还差 300px 所以每个人都要收缩一下才可以放下，具体收缩的值，这样计算：
-
-1. 计算分母： (200×1) + (300×2) + (200×3) = 1400
+1. 计算分母：`(200×1) + (300×2) + (200×3) = 1400`
 2. 计算比例：
-   项目一： (200×1) / 1400 = 比例值1
-   项目二： (300×2) / 1400 = 比例值2
-   项目三： (200×3) / 1400 = 比例值3
+   项目一：`(200×1) / 1400 = 比例值1`
+   项目二：`(300×2) / 1400 = 比例值2`
+   项目三：`(200×3) / 1400 = 比例值3`
 3. 计算最终收缩大小：
-   项目一需要收缩： 比例值1 × 300
-   项目二需要收缩： 比例值2 × 300
-   项目三需要收缩： 比例值3 × 300
+   项目一需要收缩：`比例值1 × 300`
+   项目二需要收缩：`比例值2 × 300`
+   项目三需要收缩：`比例值3 × 300`
 
-#### flex复合属性
+#### 20.9.10 `flex` 复合属性
 
-flex 是复合属性，复合了： flex-grow 、 flex-shrink 、 flex-basis 三个属性，默认值为 0 1 auto 。
+`flex` 是复合属性，复合了：`flex-grow`、`flex-shrink`、`flex-basis` 三个属性，默认值为 `0 1 auto`。
 
-- 如果写 flex:1 1 auto ，则可简写为： flex:auto
-- 如果写 flex:1 1 0 ，则可简写为： flex:1
-- 如果写 flex:0 0 auto ，则可简写为： flex:none
-- 如果写 flex:0 1 auto ，则可简写为： flex:0 auto —— 即 flex 初始值。
+- 如果写 `flex:1 1 auto`，则可简写为：`flex:auto`
+- 如果写 `flex:1 1 0`，则可简写为：`flex:1`
+- 如果写 `flex:0 0 auto`，则可简写为：`flex:none`
+- 如果写 `flex:0 1 auto`，则可简写为：`flex:0 auto` —— 即 `flex` 初始值。
 
-#### 项目排序
+#### 20.9.11 项目排序
 
-order 属性定义项目的排列顺序。数值越小，排列越靠前，默认为 0 。可以为负数
+`order` 属性定义项目的排列顺序。数值越小，排列越靠前，默认为 `0`。可以为负数
 
-#### 单独对齐
+#### 20.9.12 单独对齐
 
-- 通过 align-self 属性，可以单独调整某个伸缩项目的对齐方式
-- 默认值为 auto ，表示继承父元素的 align-items 属性。
+- 通过 `align-self` 属性，可以单独调整某个伸缩项目的对齐方式
+- 默认值为 `auto`，表示继承父元素的 `align-items` 属性。
+
+### 21. 响应式布局
+
+#### 21.1 媒体查询
+
+##### 媒体类型
+
+- all 检测所有设备
+- screen 检测电子屏幕，包括：电脑屏幕，平板屏幕，手机屏幕
+- print 检测打印机
+
+#### 媒体特性
 
 [image-1]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/A3t2Br.png
-
 [image-2]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/B0IC8m.png
-
 [image-3]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/nkaU2I.png
-
 [image-4]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/ahtBVR.png
-
 [image-5]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/QwGeF7.png
-
 [image-6]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/2b417j.png
-
 [image-7]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/fpwYBF.png
