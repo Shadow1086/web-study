@@ -23,6 +23,7 @@
 格式：
 
 ```html
+
 <style>
 	h1 {
 		color: red;
@@ -48,6 +49,7 @@
 格式：
 
 ```html
+
 <link rel="stylesheet" href="styles.css">
 ```
 
@@ -323,6 +325,7 @@ ul li a {
 举例：
 
 ```html
+
 <style>
 	div > a {
 		color: red;
@@ -1010,8 +1013,8 @@ div {
 ```css
 /* 自定义鼠标光标 */
 cursor:
-
 url
+
 (
 "./arrow.png"
 )
@@ -1579,16 +1582,24 @@ px blue inset
 
 ```css
 /* border以外的背景图不可见，默认值 */
-background-clip: border-box;
+background-clip: border-box
+
+;
 
 /* padding以外的背景图不可见，背景颜色也不可见 */
-background-clip: padding-box;
+background-clip: padding-box
+
+;
 
 /* content以外的背景图和背景色都不可见 */
-background-clip: content-box;
+background-clip: content-box
+
+;
 
 /* 配合文字透明，即可实现背景图只呈现在文字上 */
-background-clip: text;
+background-clip: text
+
+;
 ```
 
 #### 20.5.5 background-size 背景大小
@@ -1614,9 +1625,19 @@ px
 px
 
 ;
-background-size: 100% 100%;
-background-size: contain;
-background-size: cover;
+background-size:
+
+100
+%
+100
+%
+;
+background-size: contain
+
+;
+background-size: cover
+
+;
 ```
 
 #### 20.5.6 background 复合属性
@@ -1632,21 +1653,28 @@ background: <color> <image> <repeat> <position> / <size> <origin> <clip>;
 #### 20.5.7 多背景图
 
 ```css
-background: url("../../资源文件/background/bg-lt.png") no-repeat left top,
+background:
 
 url
+
+(
+"../../资源文件/background/bg-lt.png"
+)
+no-repeat left top,
+url
+
 (
 "../../资源文件/background/bg-rt.png"
 )
 no-repeat right top,
-
 url
+
 (
 "../../资源文件/background/bg-lb.png"
 )
 no-repeat left bottom,
-
 url
+
 (
 "../../资源文件/background/bg-rb.png"
 )
@@ -1664,19 +1692,70 @@ no-repeat right bottom
 
 ```css
 /* 给四个角一样的圆角 */
-border-radius: 50px;
-border-radius: 50%;
+border-radius:
+
+50
+px
+
+;
+border-radius:
+
+50
+%
+;
 
 /* 给四个角分别设置圆角 */
-border-top-left-radius: 50px;
-border-top-right-radius: 50px;
+border-top-left-radius:
+
+50
+px
+
+;
+border-top-right-radius:
+
+50
+px
+
+;
 
 /* 椭圆，100为x轴方向，200是y轴方向 */
 /* 给四个角分别设置椭圆角 */
-border-top-left-radius: 100px 200px;
-border-top-right-radius: 50px 20px;
-border-bottom-right-radius: 100px 50px;
-border-bottom-left-radius: 100px 100px;
+border-top-left-radius:
+
+100
+px
+
+200
+px
+
+;
+border-top-right-radius:
+
+50
+px
+
+20
+px
+
+;
+border-bottom-right-radius:
+
+100
+px
+
+50
+px
+
+;
+border-bottom-left-radius:
+
+100
+px
+
+100
+px
+
+;
 
 /* 复合属性，分开设置每个角的圆角，几乎不用，左上x右上x右下x左下x / 左上y右上y右下y左下y */
 border-radius:
@@ -1719,14 +1798,38 @@ px
   示例：
 
 ```css
-outline-width: 20px;
-outline-color: blue;
-outline-style: solid;
-outline-offset: 30px;
+outline-width:
+
+20
+px
+
+;
+outline-color: blue
+
+;
+outline-style: solid
+
+;
+outline-offset:
+
+30
+px
+
+;
 
 /* 复合属性，但是注意offset不能写进outline中，因为outline-offset不是outline的子属性 */
-outline: 20px solid orange;
-outline-offset: 30px;
+outline:
+
+20
+px solid orange
+
+;
+outline-offset:
+
+30
+px
+
+;
 ```
 
 ### 20.7 新增文本相关属性
@@ -1738,8 +1841,24 @@ outline-offset: 30px;
 示例：
 
 ```css
-text-shadow: 3px 3px;
-text-shadow: 3px 3px red;
+text-shadow:
+
+3
+px
+
+3
+px
+
+;
+text-shadow:
+
+3
+px
+
+3
+px red
+
+;
 text-shadow:
 
 3
@@ -1752,7 +1871,18 @@ px
 px red
 
 ;
-text-shadow: 3px 3px 15px black;
+text-shadow:
+
+3
+px
+
+3
+px
+
+15
+px black
+
+;
 /* 在背景为黑色，字体颜色为白色时可以制造光晕效果 */
 text-shadow:
 
@@ -1772,13 +1902,21 @@ px red
 
 ```css
 /* 按原文显示，与pre标签效果相同 */
-white-space: pre;
+white-space: pre
+
+;
 /* 容器不够大时自动换行 */
-white-space: pre-wrap;
+white-space: pre-wrap
+
+;
 /* 每句话最左侧和最右侧无效空格去掉，即只认换行 */
-white-space: pre-line;
+white-space: pre-line
+
+;
 /* 所有均不换行 */
-white-space: nowrap;
+white-space: nowrap
+
+;
 ```
 
 说明：normal为默认值，文本超出边界自动换行，文本中的换行被浏览器识别为一个空格
@@ -1796,10 +1934,18 @@ white-space: nowrap;
 示例：
 
 ```css
-white-space: nowrap;
-overflow: hidden;
-text-overflow: clip;
-text-overflow: ellipsis;
+white-space: nowrap
+
+;
+overflow: hidden
+
+;
+text-overflow: clip
+
+;
+text-overflow: ellipsis
+
+;
 ```
 
 #### 20.7.4 文本修饰
@@ -1807,11 +1953,19 @@ text-overflow: ellipsis;
 说明：使用text-decoration属性可以设置文本修饰
 
 ```css
-text-decoration-line: overline;
-text-decoration-style: dashed;
-text-decoration-color: blue;
+text-decoration-line: overline
+
+;
+text-decoration-style: dashed
+
+;
+text-decoration-color: blue
+
+;
 /* 复合属性 */
-text-decoration: overline dashed blue;
+text-decoration: overline dashed blue
+
+;
 ```
 
 #### 20.7.5 文本描边
@@ -1820,12 +1974,24 @@ text-decoration: overline dashed blue;
 
 ```css
 /* 文本描边颜色 */
--webkit-text-stroke-color: red;
+-webkit-text-stroke-color: red
+
+;
 /* 文本描边宽度 */
--webkit-text-stroke-width: 3px;
+-webkit-text-stroke-width:
+
+3
+px
+
+;
 
 /* 复合属性 */
--webkit-text-stroke: 3px red;
+-webkit-text-stroke:
+
+3
+px red
+
+;
 ```
 
 ### 20.8 多列布局
@@ -2027,6 +2193,18 @@ align-content:stretch
 
 - 概念：flex-basis设置的是主轴方向的基准长度，会让高度或者宽度失效
 - 作用：浏览器会根据这个属性设置的值，计算主轴上是否还有多余空间，默认值auto,继：伸缩项目的宽或高
+
+#### 伸缩
+
+##### 伸 - flex-grow
+
+- 概念： flex-grow 定义伸缩项目的放大比例，默认为 0 ，即：纵使主轴存在剩余空间，也不拉伸（放大）。
+- 规则：
+
+    1. 若所有伸缩项目的 flex-grow 值都为 1 ，则：它们将等分剩余空间（如果有空间的话）。
+    2. 若三个伸缩项目的 flex-grow 值分别为： 1 、 2 、 3 ，则：分别瓜分到： 1/6 、 2/6 、3/6 的空间。
+
+#### 缩 - flex-shrink
 
 [image-1]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/A3t2Br.png
 
