@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		*{
+            margin: 0;
+            padding: 0;
+		}
+		h1 {
+            height: 200px;
+			background-color: gray;
+			text-align: center;
+			line-height: 200px;
+			font-size: 100px;
+		}
+		@media (width:800px){
+			h1 {
+				background-color: green;
+			}
+        }
+		/*视口小于等于700px时应用样式*/
+        @media (max-width:700px){
+            h1 {
+                background-color: orange;
+            }
+        }
+		@media (min-width: 900px){
+			h1{
+				background-color: deepskyblue;
+			}
+		}
+		/*检测到屏幕的额宽度等于1728时，应用样式*/
+		@media (device-width: 1728px){
+			h1{
+				background-image: linear-gradient(red,green);
+			}
+		}
+	</style>
+</head>
+<body>
+ <h1>你好啊</h1>
+</body>
+</html>
