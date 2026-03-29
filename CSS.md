@@ -2023,6 +2023,11 @@ align-content:stretch
 ;
 ```
 
+#### flex-basis 基准长度
+
+- 概念：flex-basis设置的是主轴方向的基准长度，会让高度或者宽度失效
+- 作用：浏览器会根据这个属性设置的值，计算主轴上是否还有多余空间，默认值auto,继：伸缩项目的宽或高
+
 [image-1]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/A3t2Br.png
 
 [image-2]: https://cdn.jsdelivr.net/gh/Shadow1086/myPicture@master/uPic/B0IC8m.png
